@@ -1,0 +1,16 @@
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\Sistem_Informasi_Hotel.exe.config
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\Sistem_Informasi_Hotel.exe
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\Sistem_Informasi_Hotel.pdb
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\Sistem_Informasi_Hotel.xml
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\Bunifu_UI_v1.5.3.dll
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.Resources.resources
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.vbproj.GenerateResource.Cache
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.exe
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.xml
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.pdb
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\MySql.Data.dll
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\MySql.Data.xml
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.Login.resources
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.Dashboard.resources
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\MaterialSkin.dll
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.vbprojResolveAssemblyReference.cache
