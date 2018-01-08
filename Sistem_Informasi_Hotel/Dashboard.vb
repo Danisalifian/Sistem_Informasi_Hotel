@@ -12,9 +12,9 @@ Public Class Dashboard
         list_pegawai()
         list_kamar()
         list_konsumen()
-    End Sub
-    Private Sub labelSI_Click(sender As Object, e As EventArgs) 
-
+        disable_input_konsumen()
+        'load_datapegawai()
+        'load_datakonsumen()
     End Sub
 
     Private Sub btnreservasi_Click(sender As Object, e As EventArgs) Handles btnreservasi.Click
@@ -69,11 +69,9 @@ Public Class Dashboard
     End Sub
 
     Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
-        'Application.Exit()
         Dim flogin As New Login
         Me.Hide()
         flogin.ShowDialog()
-        'Me.Close()
     End Sub
 
     Private Sub simpan_konsumen()
@@ -81,25 +79,79 @@ Public Class Dashboard
         Dim cmd As MySqlCommand
         Dim query As String
         Dim reader As MySqlDataReader
+        Dim tgl_lahir As String
+        Dim j_kel As String
+
+        tgl_lahir = DateTimePicker4.Value.Date.ToString("yyyy-MM-dd")
+        If RB_Lkons.Checked Then
+            j_kel = "Laki-laki"
+        Else
+            j_kel = "Perempuan"
+        End If
 
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
 
         Try
             mysqlconn.Open()
-            query = "INSERT INTO KONSUMEN (id_konsumen,nama,tgl_lahir,tempat_lahir,alamat,kota,no_telp)
-                     values ('" + TextBox15.Text + "','" + TextBox16.Text + "','" + TextBox17.Text +
+            query = "INSERT INTO KONSUMEN (id_konsumen,nama,j_kelamin,tgl_lahir,tempat_lahir,alamat,kota,no_telp)
+                     values ('" + TextBox15.Text + "','" + TextBox16.Text + "','" + j_kel + "','" + tgl_lahir +
                               "','" + TextBox18.Text + "','" + TextBox19.Text + "','" + TextBox20.Text + "','" + TextBox21.Text + "')"
             cmd = New MySqlCommand(query, mysqlconn)
             reader = cmd.ExecuteReader
+            mysqlconn.Close()
+            Dim result = MessageBox.Show("Data tersimpan", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            If result = DialogResult.OK Then
+                'load_datakonsumen()
+                list_konsumen()
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             mysqlconn.Dispose()
         End Try
     End Sub
+
+    Private Sub disable_input_konsumen()
+        TextBox15.Enabled = False
+        TextBox16.Enabled = False
+        DateTimePicker4.Enabled = False
+        RB_Lkons.Enabled = False
+        RB_Pkons.Enabled = False
+        TextBox18.Enabled = False
+        TextBox19.Enabled = False
+        TextBox20.Enabled = False
+        TextBox21.Enabled = False
+    End Sub
+
+    Private Sub enable_input_konsumen()
+        TextBox15.Enabled = True
+        TextBox16.Enabled = True
+        DateTimePicker4.Enabled = True
+        RB_Lkons.Enabled = True
+        RB_Pkons.Enabled = True
+        TextBox18.Enabled = True
+        TextBox19.Enabled = True
+        TextBox20.Enabled = True
+        TextBox21.Enabled = True
+    End Sub
+
+    Private Sub clear_konsumen()
+        TextBox15.Text = ""
+        TextBox16.Text = ""
+        DateTimePicker4.Value = DateTime.Now.ToString("dd MMMM yy")
+        RB_Lkons.Checked = False
+        RB_Pkons.Checked = False
+        TextBox18.Text = ""
+        TextBox19.Text = ""
+        TextBox20.Text = ""
+        TextBox21.Text = ""
+    End Sub
+
     Private Sub btnsimpankonsumen_Click(sender As Object, e As EventArgs) Handles btnsimpankonsumen.Click
         simpan_konsumen()
+        clear_konsumen()
+        disable_input_konsumen()
     End Sub
 
     Private Sub btnkonsumen_Click(sender As Object, e As EventArgs) Handles btnkonsumen.Click
@@ -125,33 +177,45 @@ Public Class Dashboard
         Dim cmd As MySqlCommand
         Dim query As String
         Dim reader As MySqlDataReader
+        Dim tgl_lahir As String
+        Dim j_kel As String
+
+        tgl_lahir = DateTimePicker5.Value.Date.ToString("yyyy-MM-dd")
+        If RB_Lpeg.Checked Then
+            j_kel = "Laki-laki"
+        Else
+            j_kel = "Perempuan"
+        End If
 
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
 
         Try
             mysqlconn.Open()
-            query = "INSERT INTO PEGAWAI (id_pegawai,nama,tgl_lahir,tempat_lahir,alamat,no_telp,pass)
-                     values ('" + TextBox22.Text + "','" + TextBox23.Text + "','" + TextBox24.Text +
+            query = "INSERT INTO PEGAWAI (id_pegawai,nama,j_kelamin,tgl_lahir,tempat_lahir,alamat,no_telp,pass)
+                     values ('" + TextBox22.Text + "','" + TextBox23.Text + "','" + j_kel + "','" + tgl_lahir +
                               "','" + TextBox25.Text + "','" + TextBox26.Text + "','" + TextBox27.Text + "','" + TextBox28.Text + "')"
             cmd = New MySqlCommand(query, mysqlconn)
             reader = cmd.ExecuteReader
-            MessageBox.Show("Data tersimpan", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim result = MessageBox.Show("Data tersimpan", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            If result = DialogResult.OK Then
+                'load_datapegawai()
+                list_pegawai()
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             mysqlconn.Dispose()
         End Try
     End Sub
+
     Private Sub btnsimpan_pegawai_Click(sender As Object, e As EventArgs) Handles btnsimpan_pegawai.Click
         simpan_pegawai()
     End Sub
 
     'Private Sub load_datapegawai()
     '    Dim mysqlconn As MySqlConnection
-    '    'Dim cmd As MySqlCommand
     '    Dim query As String
-    '    'Dim reader As MySqlDataReader
 
     '    mysqlconn = New MySqlConnection
     '    mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
@@ -159,12 +223,31 @@ Public Class Dashboard
     '    Try
     '        mysqlconn.Open()
     '        query = "SELECT * FROM PEGAWAI"
-    '        'cmd = New MySqlCommand(query, mysqlconn)
-    '        'reader = cmd.ExecuteReader
     '        Dim data As New MySqlDataAdapter(query, mysqlconn)
     '        Dim ds_pegawai As DataSet = New DataSet
     '        data.Fill(ds_pegawai, "pegawai")
-    '        DataGridView1.DataSource = ds_pegawai.Tables("pegawai")
+    '        DGV_pegawai.DataSource = ds_pegawai.Tables("pegawai")
+    '        mysqlconn.Close()
+    '    Catch ex As Exception
+    '        MessageBox.Show(ex.Message)
+    '        mysqlconn.Dispose()
+    '    End Try
+    'End Sub
+
+    'Private Sub load_datakonsumen()
+    '    Dim mysqlconn As MySqlConnection
+    '    Dim query As String
+
+    '    mysqlconn = New MySqlConnection
+    '    mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
+
+    '    Try
+    '        mysqlconn.Open()
+    '        query = "SELECT * FROM KONSUMEN"
+    '        Dim data As New MySqlDataAdapter(query, mysqlconn)
+    '        Dim ds_konsumen As DataSet = New DataSet
+    '        data.Fill(ds_konsumen, "konsumen")
+    '        DGV_konsumen.DataSource = ds_konsumen.Tables("konsumen")
     '        mysqlconn.Close()
     '    Catch ex As Exception
     '        MessageBox.Show(ex.Message)
@@ -173,119 +256,140 @@ Public Class Dashboard
     'End Sub
 
     Private Sub list_konsumen()
-        Dim mysqlconn As New MySqlConnection
-        Dim query As String = "SELECT * FROM KONSUMEN"
+        Dim mysqlconn As MySqlConnection
+        Dim query As String
         Dim adapter As New MySqlDataAdapter
         Dim cmd As New MySqlCommand
         Dim TABLE As New DataTable
         Dim i As Integer
 
-        If mysqlconn.State = ConnectionState.Closed Then
-            mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
+        lvkonsumen.Items.Clear()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
+
+        Try
             mysqlconn.Open()
-        End If
+            query = "SELECT * FROM KONSUMEN"
 
-        With cmd
-            .CommandText = query
-            .Connection = mysqlconn
-        End With
-
-        With adapter
-            .SelectCommand = cmd
-            .Fill(TABLE)
-        End With
-
-        'lvpegawai.Clear()
-
-        For i = 0 To TABLE.Rows.Count - 1
-            With lvkonsumen
-                .Items.Add(TABLE.Rows(i)("id_konsumen"))
-                With .Items(.Items.Count - 1).SubItems
-                    .Add(TABLE.Rows(i)("nama"))
-                    .Add(TABLE.Rows(i)("tgl_lahir"))
-                    .Add(TABLE.Rows(i)("tempat_lahir"))
-                    .Add(TABLE.Rows(i)("alamat"))
-                    .Add(TABLE.Rows(i)("kota"))
-                    .Add(TABLE.Rows(i)("no_telp"))
-                End With
+            With cmd
+                .CommandText = query
+                .Connection = mysqlconn
             End With
-        Next
+
+            With adapter
+                .SelectCommand = cmd
+                .Fill(TABLE)
+            End With
+
+            For i = 0 To TABLE.Rows.Count - 1
+                With lvkonsumen
+                    .Items.Add(TABLE.Rows(i)("id_konsumen"))
+                    With .Items(.Items.Count - 1).SubItems
+                        .Add(TABLE.Rows(i)("nama"))
+                        .Add(TABLE.Rows(i)("j_kelamin"))
+                        .Add(TABLE.Rows(i)("tgl_lahir"))
+                        .Add(TABLE.Rows(i)("tempat_lahir"))
+                        .Add(TABLE.Rows(i)("alamat"))
+                        .Add(TABLE.Rows(i)("kota"))
+                        .Add(TABLE.Rows(i)("no_telp"))
+                    End With
+                End With
+            Next
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            mysqlconn.Dispose()
+        End Try
     End Sub
+
     Private Sub list_kamar()
-        Dim mysqlconn As New MySqlConnection
-        Dim query As String = "SELECT * FROM KAMAR"
+        Dim mysqlconn As MySqlConnection
+        Dim query As String
         Dim adapter As New MySqlDataAdapter
         Dim cmd As New MySqlCommand
         Dim TABLE As New DataTable
         Dim i As Integer
 
-        If mysqlconn.State = ConnectionState.Closed Then
-            mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
+        lvkamar.Items.Clear()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
+
+        Try
             mysqlconn.Open()
-        End If
+            query = "SELECT * FROM KAMAR"
 
-        With cmd
-            .CommandText = query
-            .Connection = mysqlconn
-        End With
-
-        With adapter
-            .SelectCommand = cmd
-            .Fill(TABLE)
-        End With
-
-        'lvpegawai.Clear()
-
-        For i = 0 To TABLE.Rows.Count - 1
-            With lvkamar
-                .Items.Add(TABLE.Rows(i)("id_kamar"))
-                With .Items(.Items.Count - 1).SubItems
-                    .Add(TABLE.Rows(i)("tipe_kamar"))
-                    .Add(TABLE.Rows(i)("harga"))
-                    .Add(TABLE.Rows(i)("fasilitas"))
-                End With
+            With cmd
+                .CommandText = query
+                .Connection = mysqlconn
             End With
-        Next
+
+            With adapter
+                .SelectCommand = cmd
+                .Fill(TABLE)
+            End With
+
+            For i = 0 To TABLE.Rows.Count - 1
+                With lvkamar
+                    .Items.Add(TABLE.Rows(i)("id_kamar"))
+                    With .Items(.Items.Count - 1).SubItems
+                        .Add(TABLE.Rows(i)("tipe_kamar"))
+                        .Add(TABLE.Rows(i)("harga"))
+                        .Add(TABLE.Rows(i)("fasilitas"))
+                    End With
+                End With
+            Next
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            mysqlconn.Dispose()
+        End Try
     End Sub
 
     Private Sub list_pegawai()
         Dim mysqlconn As New MySqlConnection
-        Dim query As String = "SELECT * FROM PEGAWAI"
+        Dim query As String '= "SELECT * FROM PEGAWAI"
         Dim adapter As New MySqlDataAdapter
         Dim cmd As New MySqlCommand
         Dim TABLE As New DataTable
         Dim i As Integer
 
-        If mysqlconn.State = ConnectionState.Closed Then
-            mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
+        lvpegawai.Items.Clear()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
+        Try
             mysqlconn.Open()
-        End If
+            query = "SELECT * FROM PEGAWAI"
 
-        With cmd
-            .CommandText = query
-            .Connection = mysqlconn
-        End With
-
-        With adapter
-            .SelectCommand = cmd
-            .Fill(TABLE)
-        End With
-
-        'lvpegawai.Clear()
-
-        For i = 0 To TABLE.Rows.Count - 1
-            With lvpegawai
-                .Items.Add(TABLE.Rows(i)("id_pegawai"))
-                With .Items(.Items.Count - 1).SubItems
-                    .Add(TABLE.Rows(i)("nama"))
-                    .Add(TABLE.Rows(i)("tgl_lahir"))
-                    .Add(TABLE.Rows(i)("tempat_lahir"))
-                    .Add(TABLE.Rows(i)("alamat"))
-                    .Add(TABLE.Rows(i)("no_telp"))
-                    .Add(TABLE.Rows(i)("pass"))
-                End With
+            With cmd
+                .CommandText = query
+                .Connection = mysqlconn
             End With
-        Next
+
+            With adapter
+                .SelectCommand = cmd
+                .Fill(TABLE)
+            End With
+
+            For i = 0 To TABLE.Rows.Count - 1
+                With lvpegawai
+                    .Items.Add(TABLE.Rows(i)("id_pegawai"))
+                    With .Items(.Items.Count - 1).SubItems
+                        .Add(TABLE.Rows(i)("nama"))
+                        .Add(TABLE.Rows(i)("j_kelamin"))
+                        .Add(TABLE.Rows(i)("tgl_lahir"))
+                        .Add(TABLE.Rows(i)("tempat_lahir"))
+                        .Add(TABLE.Rows(i)("alamat"))
+                        .Add(TABLE.Rows(i)("no_telp"))
+                        '.Add(TABLE.Rows(i)("pass"))
+                    End With
+                End With
+            Next
+            'TABLE.Rows.Clear()
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            mysqlconn.Dispose()
+        End Try
     End Sub
 
     Private Sub PanelPegawai_Paint(sender As Object, e As PaintEventArgs) Handles PanelPegawai.Paint
@@ -307,9 +411,12 @@ Public Class Dashboard
                      values ('" + TextBox29.Text + "','" + TextBox30.Text + "','" + TextBox31.Text + "','" + RichTextBox2.Text + "')"
             cmd = New MySqlCommand(query, mysqlconn)
             reader = cmd.ExecuteReader
-            MessageBox.Show("Data tersimpan", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim result = MessageBox.Show("Data tersimpan", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            If result = DialogResult.OK Then
+                list_kamar()
+            End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(ex.Message)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -354,6 +461,69 @@ Public Class Dashboard
 
     Private Sub btnsimpan_reservasi_Click(sender As Object, e As EventArgs) Handles btnsimpan_reservasi.Click
         simpan_reservasi()
+    End Sub
+
+    Private Sub btn_tambahkonsumen_Click(sender As Object, e As EventArgs) Handles btn_tambahkonsumen.Click
+        enable_input_konsumen()
+        TextBox15.Focus()
+    End Sub
+
+    Private Sub btn_batalkonsumen_Click(sender As Object, e As EventArgs) Handles btn_batalkonsumen.Click
+        clear_konsumen()
+        disable_input_konsumen()
+    End Sub
+
+    Private Sub hapus_konsumen()
+        Dim mysqlconn As MySqlConnection
+        Dim cmd As MySqlCommand
+        Dim query As String
+        Dim reader As MySqlDataReader
+        Dim tgl_lahir As String
+        Dim j_kel As String
+
+        tgl_lahir = DateTimePicker4.Value.Date.ToString("yyyy-MM-dd")
+        If RB_Lkons.Checked Then
+            j_kel = "Laki-laki"
+        Else
+            j_kel = "Perempuan"
+        End If
+
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
+
+        Try
+            mysqlconn.Open()
+            query = "DELETE FROM `db_hotel`.`konsumen` WHERE `id_konsumen` = '" + TextBox15.Text + "';"
+            cmd = New MySqlCommand(query, mysqlconn)
+            reader = cmd.ExecuteReader
+            mysqlconn.Close()
+            Dim result = MessageBox.Show("Data terhapus", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            If result = DialogResult.OK Then
+                list_konsumen()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub btn_hapuskonsumen_Click(sender As Object, e As EventArgs) Handles btn_hapuskonsumen.Click
+        hapus_konsumen()
+    End Sub
+
+    Private Sub lvkonsumen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lvkonsumen.SelectedIndexChanged
+        Dim index As Integer
+        If lvkonsumen.SelectedItems.Count = 0 Then Exit Sub
+        With lvkonsumen
+            index = .SelectedIndices(0)
+            TextBox15.Text = .Items(index).Text
+            TextBox16.Text = .Items(index).SubItems(1).Text
+            TextBox18.Text = .Items(index).SubItems(4).Text
+            TextBox19.Text = .Items(index).SubItems(5).Text
+            TextBox20.Text = .Items(index).SubItems(6).Text
+            TextBox21.Text = .Items(index).SubItems(7).Text
+        End With
     End Sub
 
     Private Sub Panelheadcontrol_MouseMove(sender As Object, e As MouseEventArgs)

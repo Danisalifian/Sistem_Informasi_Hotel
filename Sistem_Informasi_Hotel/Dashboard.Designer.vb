@@ -97,13 +97,18 @@ Partial Class Dashboard
         Me.MaterialLabel40 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox30 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel39 = New MaterialSkin.Controls.MaterialLabel()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.PanelPencarian = New System.Windows.Forms.Panel()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.PanelLaporan = New System.Windows.Forms.Panel()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         Me.Panelkonsumen = New System.Windows.Forms.Panel()
+        Me.btn_hapuskonsumen = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.RB_Pkons = New System.Windows.Forms.RadioButton()
+        Me.RB_Lkons = New System.Windows.Forms.RadioButton()
+        Me.MaterialLabel44 = New MaterialSkin.Controls.MaterialLabel()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.lvkonsumen = New System.Windows.Forms.ListView()
         Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader13 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -112,12 +117,13 @@ Partial Class Dashboard
         Me.ColumnHeader16 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader17 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader18 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader19 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MaterialLabel23 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel30 = New MaterialSkin.Controls.MaterialLabel()
-        Me.BunifuThinButton25 = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.btn_batalkonsumen = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.btnsimpankonsumen = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.BunifuThinButton23 = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.btn_tambahkonsumen = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel29 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
@@ -125,12 +131,15 @@ Partial Class Dashboard
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel26 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel27 = New MaterialSkin.Controls.MaterialLabel()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel25 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel24 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.MaterialLabel24 = New MaterialSkin.Controls.MaterialLabel()
         Me.PanelPegawai = New System.Windows.Forms.Panel()
+        Me.RB_Ppeg = New System.Windows.Forms.RadioButton()
+        Me.RB_Lpeg = New System.Windows.Forms.RadioButton()
+        Me.MaterialLabel43 = New MaterialSkin.Controls.MaterialLabel()
+        Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
         Me.lvpegawai = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -151,7 +160,6 @@ Partial Class Dashboard
         Me.MaterialLabel35 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox25 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel34 = New MaterialSkin.Controls.MaterialLabel()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel33 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox23 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel32 = New MaterialSkin.Controls.MaterialLabel()
@@ -609,7 +617,7 @@ Partial Class Dashboard
         Me.MaterialLabel20.Depth = 0
         Me.MaterialLabel20.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel20.Location = New System.Drawing.Point(18, 328)
+        Me.MaterialLabel20.Location = New System.Drawing.Point(18, 321)
         Me.MaterialLabel20.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel20.Name = "MaterialLabel20"
         Me.MaterialLabel20.Size = New System.Drawing.Size(84, 19)
@@ -618,7 +626,7 @@ Partial Class Dashboard
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(175, 326)
+        Me.TextBox12.Location = New System.Drawing.Point(175, 321)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(186, 22)
         Me.TextBox12.TabIndex = 43
@@ -629,7 +637,7 @@ Partial Class Dashboard
         Me.MaterialLabel21.Depth = 0
         Me.MaterialLabel21.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel21.Location = New System.Drawing.Point(18, 295)
+        Me.MaterialLabel21.Location = New System.Drawing.Point(18, 288)
         Me.MaterialLabel21.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel21.Name = "MaterialLabel21"
         Me.MaterialLabel21.Size = New System.Drawing.Size(59, 19)
@@ -638,7 +646,7 @@ Partial Class Dashboard
         '
         'TextBox13
         '
-        Me.TextBox13.Location = New System.Drawing.Point(175, 293)
+        Me.TextBox13.Location = New System.Drawing.Point(175, 288)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(186, 22)
         Me.TextBox13.TabIndex = 41
@@ -649,7 +657,7 @@ Partial Class Dashboard
         Me.MaterialLabel22.Depth = 0
         Me.MaterialLabel22.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel22.Location = New System.Drawing.Point(18, 260)
+        Me.MaterialLabel22.Location = New System.Drawing.Point(18, 255)
         Me.MaterialLabel22.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel22.Name = "MaterialLabel22"
         Me.MaterialLabel22.Size = New System.Drawing.Size(43, 19)
@@ -658,7 +666,7 @@ Partial Class Dashboard
         '
         'TextBox14
         '
-        Me.TextBox14.Location = New System.Drawing.Point(175, 258)
+        Me.TextBox14.Location = New System.Drawing.Point(175, 255)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(186, 22)
         Me.TextBox14.TabIndex = 39
@@ -669,7 +677,7 @@ Partial Class Dashboard
         Me.MaterialLabel17.Depth = 0
         Me.MaterialLabel17.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel17.Location = New System.Drawing.Point(18, 228)
+        Me.MaterialLabel17.Location = New System.Drawing.Point(18, 222)
         Me.MaterialLabel17.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel17.Name = "MaterialLabel17"
         Me.MaterialLabel17.Size = New System.Drawing.Size(106, 19)
@@ -678,7 +686,7 @@ Partial Class Dashboard
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(175, 226)
+        Me.TextBox9.Location = New System.Drawing.Point(175, 222)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(186, 22)
         Me.TextBox9.TabIndex = 37
@@ -689,7 +697,7 @@ Partial Class Dashboard
         Me.MaterialLabel18.Depth = 0
         Me.MaterialLabel18.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel18.Location = New System.Drawing.Point(18, 195)
+        Me.MaterialLabel18.Location = New System.Drawing.Point(18, 189)
         Me.MaterialLabel18.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel18.Name = "MaterialLabel18"
         Me.MaterialLabel18.Size = New System.Drawing.Size(86, 19)
@@ -698,7 +706,7 @@ Partial Class Dashboard
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(175, 193)
+        Me.TextBox10.Location = New System.Drawing.Point(175, 189)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(186, 22)
         Me.TextBox10.TabIndex = 35
@@ -709,7 +717,7 @@ Partial Class Dashboard
         Me.MaterialLabel19.Depth = 0
         Me.MaterialLabel19.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel19.Location = New System.Drawing.Point(18, 160)
+        Me.MaterialLabel19.Location = New System.Drawing.Point(18, 156)
         Me.MaterialLabel19.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel19.Name = "MaterialLabel19"
         Me.MaterialLabel19.Size = New System.Drawing.Size(73, 19)
@@ -718,7 +726,7 @@ Partial Class Dashboard
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(175, 158)
+        Me.TextBox11.Location = New System.Drawing.Point(175, 156)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(186, 22)
         Me.TextBox11.TabIndex = 33
@@ -729,7 +737,7 @@ Partial Class Dashboard
         Me.MaterialLabel16.Depth = 0
         Me.MaterialLabel16.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel16.Location = New System.Drawing.Point(18, 124)
+        Me.MaterialLabel16.Location = New System.Drawing.Point(18, 123)
         Me.MaterialLabel16.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel16.Name = "MaterialLabel16"
         Me.MaterialLabel16.Size = New System.Drawing.Size(131, 19)
@@ -738,7 +746,7 @@ Partial Class Dashboard
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(175, 122)
+        Me.TextBox8.Location = New System.Drawing.Point(175, 123)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(186, 22)
         Me.TextBox8.TabIndex = 31
@@ -749,7 +757,7 @@ Partial Class Dashboard
         Me.MaterialLabel15.Depth = 0
         Me.MaterialLabel15.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel15.Location = New System.Drawing.Point(18, 91)
+        Me.MaterialLabel15.Location = New System.Drawing.Point(18, 90)
         Me.MaterialLabel15.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel15.Name = "MaterialLabel15"
         Me.MaterialLabel15.Size = New System.Drawing.Size(96, 19)
@@ -758,7 +766,7 @@ Partial Class Dashboard
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(175, 89)
+        Me.TextBox7.Location = New System.Drawing.Point(175, 90)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(186, 22)
         Me.TextBox7.TabIndex = 29
@@ -769,7 +777,7 @@ Partial Class Dashboard
         Me.MaterialLabel13.Depth = 0
         Me.MaterialLabel13.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel13.Location = New System.Drawing.Point(18, 56)
+        Me.MaterialLabel13.Location = New System.Drawing.Point(18, 57)
         Me.MaterialLabel13.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel13.Name = "MaterialLabel13"
         Me.MaterialLabel13.Size = New System.Drawing.Size(90, 19)
@@ -782,7 +790,7 @@ Partial Class Dashboard
         Me.MaterialLabel14.Depth = 0
         Me.MaterialLabel14.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel14.Location = New System.Drawing.Point(18, 23)
+        Me.MaterialLabel14.Location = New System.Drawing.Point(18, 24)
         Me.MaterialLabel14.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel14.Name = "MaterialLabel14"
         Me.MaterialLabel14.Size = New System.Drawing.Size(107, 19)
@@ -791,14 +799,14 @@ Partial Class Dashboard
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(175, 54)
+        Me.TextBox5.Location = New System.Drawing.Point(175, 57)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(186, 22)
         Me.TextBox5.TabIndex = 27
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(175, 23)
+        Me.TextBox6.Location = New System.Drawing.Point(175, 24)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(186, 22)
         Me.TextBox6.TabIndex = 26
@@ -831,7 +839,7 @@ Partial Class Dashboard
         'RichTextBox1
         '
         Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(189, 327)
+        Me.RichTextBox1.Location = New System.Drawing.Point(189, 325)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(186, 106)
         Me.RichTextBox1.TabIndex = 21
@@ -843,7 +851,7 @@ Partial Class Dashboard
         Me.MaterialLabel12.Depth = 0
         Me.MaterialLabel12.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel12.Location = New System.Drawing.Point(32, 327)
+        Me.MaterialLabel12.Location = New System.Drawing.Point(32, 325)
         Me.MaterialLabel12.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel12.Name = "MaterialLabel12"
         Me.MaterialLabel12.Size = New System.Drawing.Size(61, 19)
@@ -866,7 +874,7 @@ Partial Class Dashboard
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(189, 291)
+        Me.TextBox4.Location = New System.Drawing.Point(189, 292)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(186, 22)
         Me.TextBox4.TabIndex = 18
@@ -902,7 +910,7 @@ Partial Class Dashboard
         Me.MaterialLabel10.Depth = 0
         Me.MaterialLabel10.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel10.Location = New System.Drawing.Point(32, 262)
+        Me.MaterialLabel10.Location = New System.Drawing.Point(32, 259)
         Me.MaterialLabel10.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel10.Name = "MaterialLabel10"
         Me.MaterialLabel10.Size = New System.Drawing.Size(76, 19)
@@ -912,7 +920,7 @@ Partial Class Dashboard
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(189, 260)
+        Me.TextBox3.Location = New System.Drawing.Point(189, 259)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(186, 22)
         Me.TextBox3.TabIndex = 15
@@ -921,7 +929,7 @@ Partial Class Dashboard
         '
         Me.DateTimePicker3.CustomFormat = ""
         Me.DateTimePicker3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker3.Location = New System.Drawing.Point(189, 227)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(189, 226)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(186, 22)
         Me.DateTimePicker3.TabIndex = 14
@@ -933,7 +941,7 @@ Partial Class Dashboard
         Me.MaterialLabel9.Depth = 0
         Me.MaterialLabel9.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel9.Location = New System.Drawing.Point(32, 229)
+        Me.MaterialLabel9.Location = New System.Drawing.Point(32, 226)
         Me.MaterialLabel9.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel9.Name = "MaterialLabel9"
         Me.MaterialLabel9.Size = New System.Drawing.Size(78, 19)
@@ -944,7 +952,7 @@ Partial Class Dashboard
         '
         Me.DateTimePicker2.CustomFormat = ""
         Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(189, 192)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(189, 193)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(186, 22)
         Me.DateTimePicker2.TabIndex = 12
@@ -956,7 +964,7 @@ Partial Class Dashboard
         Me.MaterialLabel8.Depth = 0
         Me.MaterialLabel8.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel8.Location = New System.Drawing.Point(32, 194)
+        Me.MaterialLabel8.Location = New System.Drawing.Point(32, 193)
         Me.MaterialLabel8.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel8.Name = "MaterialLabel8"
         Me.MaterialLabel8.Size = New System.Drawing.Size(67, 19)
@@ -967,7 +975,7 @@ Partial Class Dashboard
         '
         Me.DateTimePicker1.CustomFormat = ""
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(189, 158)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(189, 160)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(186, 22)
         Me.DateTimePicker1.TabIndex = 10
@@ -1002,7 +1010,7 @@ Partial Class Dashboard
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(189, 125)
+        Me.TextBox2.Location = New System.Drawing.Point(189, 127)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(186, 22)
         Me.TextBox2.TabIndex = 4
@@ -1078,8 +1086,8 @@ Partial Class Dashboard
         Me.PanelKamar.Controls.Add(Me.MaterialLabel40)
         Me.PanelKamar.Controls.Add(Me.TextBox30)
         Me.PanelKamar.Controls.Add(Me.MaterialLabel39)
-        Me.PanelKamar.Controls.Add(Me.TextBox29)
         Me.PanelKamar.Controls.Add(Me.MaterialLabel2)
+        Me.PanelKamar.Controls.Add(Me.TextBox29)
         Me.PanelKamar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelKamar.Location = New System.Drawing.Point(225, 0)
         Me.PanelKamar.Name = "PanelKamar"
@@ -1196,7 +1204,7 @@ Partial Class Dashboard
         'RichTextBox2
         '
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox2.Location = New System.Drawing.Point(189, 191)
+        Me.RichTextBox2.Location = New System.Drawing.Point(189, 193)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(187, 120)
         Me.RichTextBox2.TabIndex = 14
@@ -1208,7 +1216,7 @@ Partial Class Dashboard
         Me.MaterialLabel42.Depth = 0
         Me.MaterialLabel42.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel42.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel42.Location = New System.Drawing.Point(32, 191)
+        Me.MaterialLabel42.Location = New System.Drawing.Point(32, 193)
         Me.MaterialLabel42.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel42.Name = "MaterialLabel42"
         Me.MaterialLabel42.Size = New System.Drawing.Size(66, 19)
@@ -1221,7 +1229,7 @@ Partial Class Dashboard
         Me.MaterialLabel41.Depth = 0
         Me.MaterialLabel41.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel41.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel41.Location = New System.Drawing.Point(32, 161)
+        Me.MaterialLabel41.Location = New System.Drawing.Point(32, 160)
         Me.MaterialLabel41.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel41.Name = "MaterialLabel41"
         Me.MaterialLabel41.Size = New System.Drawing.Size(49, 19)
@@ -1231,7 +1239,7 @@ Partial Class Dashboard
         'TextBox31
         '
         Me.TextBox31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox31.Location = New System.Drawing.Point(189, 158)
+        Me.TextBox31.Location = New System.Drawing.Point(189, 160)
         Me.TextBox31.Name = "TextBox31"
         Me.TextBox31.Size = New System.Drawing.Size(186, 22)
         Me.TextBox31.TabIndex = 12
@@ -1242,7 +1250,7 @@ Partial Class Dashboard
         Me.MaterialLabel40.Depth = 0
         Me.MaterialLabel40.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel40.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel40.Location = New System.Drawing.Point(32, 129)
+        Me.MaterialLabel40.Location = New System.Drawing.Point(32, 127)
         Me.MaterialLabel40.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel40.Name = "MaterialLabel40"
         Me.MaterialLabel40.Size = New System.Drawing.Size(85, 19)
@@ -1252,7 +1260,7 @@ Partial Class Dashboard
         'TextBox30
         '
         Me.TextBox30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox30.Location = New System.Drawing.Point(189, 126)
+        Me.TextBox30.Location = New System.Drawing.Point(189, 127)
         Me.TextBox30.Name = "TextBox30"
         Me.TextBox30.Size = New System.Drawing.Size(186, 22)
         Me.TextBox30.TabIndex = 10
@@ -1263,12 +1271,25 @@ Partial Class Dashboard
         Me.MaterialLabel39.Depth = 0
         Me.MaterialLabel39.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel39.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel39.Location = New System.Drawing.Point(32, 97)
+        Me.MaterialLabel39.Location = New System.Drawing.Point(32, 94)
         Me.MaterialLabel39.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel39.Name = "MaterialLabel39"
         Me.MaterialLabel39.Size = New System.Drawing.Size(68, 19)
         Me.MaterialLabel39.TabIndex = 7
         Me.MaterialLabel39.Text = "Id Kamar"
+        '
+        'MaterialLabel2
+        '
+        Me.MaterialLabel2.AutoSize = True
+        Me.MaterialLabel2.Depth = 0
+        Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel2.Location = New System.Drawing.Point(17, 27)
+        Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel2.Name = "MaterialLabel2"
+        Me.MaterialLabel2.Size = New System.Drawing.Size(82, 19)
+        Me.MaterialLabel2.TabIndex = 0
+        Me.MaterialLabel2.Text = "Info Kamar"
         '
         'TextBox29
         '
@@ -1277,19 +1298,6 @@ Partial Class Dashboard
         Me.TextBox29.Name = "TextBox29"
         Me.TextBox29.Size = New System.Drawing.Size(186, 22)
         Me.TextBox29.TabIndex = 8
-        '
-        'MaterialLabel2
-        '
-        Me.MaterialLabel2.AutoSize = True
-        Me.MaterialLabel2.Depth = 0
-        Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel2.Location = New System.Drawing.Point(6, 30)
-        Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel2.Name = "MaterialLabel2"
-        Me.MaterialLabel2.Size = New System.Drawing.Size(82, 19)
-        Me.MaterialLabel2.TabIndex = 0
-        Me.MaterialLabel2.Text = "Info Kamar"
         '
         'PanelPencarian
         '
@@ -1307,7 +1315,7 @@ Partial Class Dashboard
         Me.MaterialLabel3.Depth = 0
         Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel3.Location = New System.Drawing.Point(6, 30)
+        Me.MaterialLabel3.Location = New System.Drawing.Point(17, 27)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
         Me.MaterialLabel3.Size = New System.Drawing.Size(75, 19)
@@ -1330,7 +1338,7 @@ Partial Class Dashboard
         Me.MaterialLabel4.Depth = 0
         Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel4.Location = New System.Drawing.Point(6, 30)
+        Me.MaterialLabel4.Location = New System.Drawing.Point(17, 27)
         Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel4.Name = "MaterialLabel4"
         Me.MaterialLabel4.Size = New System.Drawing.Size(63, 19)
@@ -1340,13 +1348,18 @@ Partial Class Dashboard
         'Panelkonsumen
         '
         Me.Panelkonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.Panelkonsumen.Controls.Add(Me.btn_hapuskonsumen)
+        Me.Panelkonsumen.Controls.Add(Me.RB_Pkons)
+        Me.Panelkonsumen.Controls.Add(Me.RB_Lkons)
+        Me.Panelkonsumen.Controls.Add(Me.MaterialLabel44)
+        Me.Panelkonsumen.Controls.Add(Me.DateTimePicker4)
         Me.Panelkonsumen.Controls.Add(Me.lvkonsumen)
         Me.Panelkonsumen.Controls.Add(Me.MaterialLabel23)
         Me.Panelkonsumen.Controls.Add(Me.TextBox21)
         Me.Panelkonsumen.Controls.Add(Me.MaterialLabel30)
-        Me.Panelkonsumen.Controls.Add(Me.BunifuThinButton25)
+        Me.Panelkonsumen.Controls.Add(Me.btn_batalkonsumen)
         Me.Panelkonsumen.Controls.Add(Me.btnsimpankonsumen)
-        Me.Panelkonsumen.Controls.Add(Me.BunifuThinButton23)
+        Me.Panelkonsumen.Controls.Add(Me.btn_tambahkonsumen)
         Me.Panelkonsumen.Controls.Add(Me.TextBox20)
         Me.Panelkonsumen.Controls.Add(Me.MaterialLabel29)
         Me.Panelkonsumen.Controls.Add(Me.TextBox19)
@@ -1354,25 +1367,94 @@ Partial Class Dashboard
         Me.Panelkonsumen.Controls.Add(Me.TextBox18)
         Me.Panelkonsumen.Controls.Add(Me.MaterialLabel26)
         Me.Panelkonsumen.Controls.Add(Me.MaterialLabel27)
-        Me.Panelkonsumen.Controls.Add(Me.TextBox17)
         Me.Panelkonsumen.Controls.Add(Me.TextBox16)
         Me.Panelkonsumen.Controls.Add(Me.MaterialLabel25)
-        Me.Panelkonsumen.Controls.Add(Me.MaterialLabel24)
         Me.Panelkonsumen.Controls.Add(Me.TextBox15)
+        Me.Panelkonsumen.Controls.Add(Me.MaterialLabel24)
         Me.Panelkonsumen.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panelkonsumen.Location = New System.Drawing.Point(225, 0)
         Me.Panelkonsumen.Name = "Panelkonsumen"
         Me.Panelkonsumen.Size = New System.Drawing.Size(1055, 637)
         Me.Panelkonsumen.TabIndex = 1
         '
+        'btn_hapuskonsumen
+        '
+        Me.btn_hapuskonsumen.ActiveBorderThickness = 1
+        Me.btn_hapuskonsumen.ActiveCornerRadius = 20
+        Me.btn_hapuskonsumen.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.btn_hapuskonsumen.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_hapuskonsumen.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_hapuskonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btn_hapuskonsumen.BackgroundImage = CType(resources.GetObject("btn_hapuskonsumen.BackgroundImage"), System.Drawing.Image)
+        Me.btn_hapuskonsumen.ButtonText = "Hapus"
+        Me.btn_hapuskonsumen.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_hapuskonsumen.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_hapuskonsumen.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_hapuskonsumen.IdleBorderThickness = 1
+        Me.btn_hapuskonsumen.IdleCornerRadius = 20
+        Me.btn_hapuskonsumen.IdleFillColor = System.Drawing.Color.White
+        Me.btn_hapuskonsumen.IdleForecolor = System.Drawing.Color.SeaGreen
+        Me.btn_hapuskonsumen.IdleLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_hapuskonsumen.Location = New System.Drawing.Point(419, 362)
+        Me.btn_hapuskonsumen.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_hapuskonsumen.Name = "btn_hapuskonsumen"
+        Me.btn_hapuskonsumen.Size = New System.Drawing.Size(91, 41)
+        Me.btn_hapuskonsumen.TabIndex = 33
+        Me.btn_hapuskonsumen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'RB_Pkons
+        '
+        Me.RB_Pkons.AutoSize = True
+        Me.RB_Pkons.Location = New System.Drawing.Point(297, 160)
+        Me.RB_Pkons.Name = "RB_Pkons"
+        Me.RB_Pkons.Size = New System.Drawing.Size(79, 17)
+        Me.RB_Pkons.TabIndex = 32
+        Me.RB_Pkons.TabStop = True
+        Me.RB_Pkons.Text = "Perempuan"
+        Me.RB_Pkons.UseVisualStyleBackColor = True
+        '
+        'RB_Lkons
+        '
+        Me.RB_Lkons.AutoSize = True
+        Me.RB_Lkons.Location = New System.Drawing.Point(189, 160)
+        Me.RB_Lkons.Name = "RB_Lkons"
+        Me.RB_Lkons.Size = New System.Drawing.Size(64, 17)
+        Me.RB_Lkons.TabIndex = 31
+        Me.RB_Lkons.TabStop = True
+        Me.RB_Lkons.Text = "Laki-laki"
+        Me.RB_Lkons.UseVisualStyleBackColor = True
+        '
+        'MaterialLabel44
+        '
+        Me.MaterialLabel44.AutoSize = True
+        Me.MaterialLabel44.Depth = 0
+        Me.MaterialLabel44.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel44.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel44.Location = New System.Drawing.Point(32, 160)
+        Me.MaterialLabel44.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel44.Name = "MaterialLabel44"
+        Me.MaterialLabel44.Size = New System.Drawing.Size(95, 19)
+        Me.MaterialLabel44.TabIndex = 30
+        Me.MaterialLabel44.Text = "Tanggal lahir"
+        '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.CustomFormat = ""
+        Me.DateTimePicker4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker4.Location = New System.Drawing.Point(189, 193)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(186, 22)
+        Me.DateTimePicker4.TabIndex = 29
+        Me.DateTimePicker4.Value = New Date(2017, 12, 29, 0, 0, 0, 0)
+        '
         'lvkonsumen
         '
-        Me.lvkonsumen.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader18})
+        Me.lvkonsumen.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader18, Me.ColumnHeader19})
         Me.lvkonsumen.FullRowSelect = True
         Me.lvkonsumen.GridLines = True
-        Me.lvkonsumen.Location = New System.Drawing.Point(35, 407)
+        Me.lvkonsumen.Location = New System.Drawing.Point(36, 419)
         Me.lvkonsumen.Name = "lvkonsumen"
-        Me.lvkonsumen.Size = New System.Drawing.Size(801, 180)
+        Me.lvkonsumen.Size = New System.Drawing.Size(947, 206)
         Me.lvkonsumen.TabIndex = 28
         Me.lvkonsumen.UseCompatibleStateImageBehavior = False
         Me.lvkonsumen.View = System.Windows.Forms.View.Details
@@ -1389,28 +1471,33 @@ Partial Class Dashboard
         '
         'ColumnHeader14
         '
-        Me.ColumnHeader14.Text = "Tanggal Lahir"
+        Me.ColumnHeader14.Text = "Jenis Kelamin"
         Me.ColumnHeader14.Width = 104
         '
         'ColumnHeader15
         '
-        Me.ColumnHeader15.Text = "Tempat Lahir"
+        Me.ColumnHeader15.Text = "Tanggal Lahir"
         Me.ColumnHeader15.Width = 108
         '
         'ColumnHeader16
         '
-        Me.ColumnHeader16.Text = "Alamat"
+        Me.ColumnHeader16.Text = "Tempat lahir"
         Me.ColumnHeader16.Width = 170
         '
         'ColumnHeader17
         '
-        Me.ColumnHeader17.Text = "Kota"
+        Me.ColumnHeader17.Text = "Alamat"
         Me.ColumnHeader17.Width = 114
         '
         'ColumnHeader18
         '
-        Me.ColumnHeader18.Text = "No Telepon"
+        Me.ColumnHeader18.Text = "Kota"
         Me.ColumnHeader18.Width = 91
+        '
+        'ColumnHeader19
+        '
+        Me.ColumnHeader19.Text = "No Telepon"
+        Me.ColumnHeader19.Width = 140
         '
         'MaterialLabel23
         '
@@ -1418,7 +1505,7 @@ Partial Class Dashboard
         Me.MaterialLabel23.Depth = 0
         Me.MaterialLabel23.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel23.Location = New System.Drawing.Point(8, 30)
+        Me.MaterialLabel23.Location = New System.Drawing.Point(17, 27)
         Me.MaterialLabel23.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel23.Name = "MaterialLabel23"
         Me.MaterialLabel23.Size = New System.Drawing.Size(80, 19)
@@ -1428,7 +1515,7 @@ Partial Class Dashboard
         'TextBox21
         '
         Me.TextBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox21.Location = New System.Drawing.Point(189, 291)
+        Me.TextBox21.Location = New System.Drawing.Point(189, 325)
         Me.TextBox21.Name = "TextBox21"
         Me.TextBox21.Size = New System.Drawing.Size(186, 22)
         Me.TextBox21.TabIndex = 22
@@ -1439,37 +1526,37 @@ Partial Class Dashboard
         Me.MaterialLabel30.Depth = 0
         Me.MaterialLabel30.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel30.Location = New System.Drawing.Point(32, 292)
+        Me.MaterialLabel30.Location = New System.Drawing.Point(32, 325)
         Me.MaterialLabel30.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel30.Name = "MaterialLabel30"
         Me.MaterialLabel30.Size = New System.Drawing.Size(87, 19)
         Me.MaterialLabel30.TabIndex = 21
         Me.MaterialLabel30.Text = "No Telepon"
         '
-        'BunifuThinButton25
+        'btn_batalkonsumen
         '
-        Me.BunifuThinButton25.ActiveBorderThickness = 1
-        Me.BunifuThinButton25.ActiveCornerRadius = 20
-        Me.BunifuThinButton25.ActiveFillColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton25.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton25.ActiveLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton25.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.BunifuThinButton25.BackgroundImage = CType(resources.GetObject("BunifuThinButton25.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuThinButton25.ButtonText = "Batal"
-        Me.BunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuThinButton25.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton25.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton25.IdleBorderThickness = 1
-        Me.BunifuThinButton25.IdleCornerRadius = 20
-        Me.BunifuThinButton25.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton25.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton25.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton25.Location = New System.Drawing.Point(284, 340)
-        Me.BunifuThinButton25.Margin = New System.Windows.Forms.Padding(5)
-        Me.BunifuThinButton25.Name = "BunifuThinButton25"
-        Me.BunifuThinButton25.Size = New System.Drawing.Size(91, 41)
-        Me.BunifuThinButton25.TabIndex = 20
-        Me.BunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_batalkonsumen.ActiveBorderThickness = 1
+        Me.btn_batalkonsumen.ActiveCornerRadius = 20
+        Me.btn_batalkonsumen.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.btn_batalkonsumen.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_batalkonsumen.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_batalkonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btn_batalkonsumen.BackgroundImage = CType(resources.GetObject("btn_batalkonsumen.BackgroundImage"), System.Drawing.Image)
+        Me.btn_batalkonsumen.ButtonText = "Batal"
+        Me.btn_batalkonsumen.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_batalkonsumen.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_batalkonsumen.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_batalkonsumen.IdleBorderThickness = 1
+        Me.btn_batalkonsumen.IdleCornerRadius = 20
+        Me.btn_batalkonsumen.IdleFillColor = System.Drawing.Color.White
+        Me.btn_batalkonsumen.IdleForecolor = System.Drawing.Color.SeaGreen
+        Me.btn_batalkonsumen.IdleLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_batalkonsumen.Location = New System.Drawing.Point(285, 360)
+        Me.btn_batalkonsumen.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_batalkonsumen.Name = "btn_batalkonsumen"
+        Me.btn_batalkonsumen.Size = New System.Drawing.Size(91, 41)
+        Me.btn_batalkonsumen.TabIndex = 20
+        Me.btn_batalkonsumen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnsimpankonsumen
         '
@@ -1489,42 +1576,42 @@ Partial Class Dashboard
         Me.btnsimpankonsumen.IdleFillColor = System.Drawing.Color.White
         Me.btnsimpankonsumen.IdleForecolor = System.Drawing.Color.SeaGreen
         Me.btnsimpankonsumen.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.btnsimpankonsumen.Location = New System.Drawing.Point(164, 340)
+        Me.btnsimpankonsumen.Location = New System.Drawing.Point(165, 360)
         Me.btnsimpankonsumen.Margin = New System.Windows.Forms.Padding(5)
         Me.btnsimpankonsumen.Name = "btnsimpankonsumen"
         Me.btnsimpankonsumen.Size = New System.Drawing.Size(91, 41)
         Me.btnsimpankonsumen.TabIndex = 19
         Me.btnsimpankonsumen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'BunifuThinButton23
+        'btn_tambahkonsumen
         '
-        Me.BunifuThinButton23.ActiveBorderThickness = 1
-        Me.BunifuThinButton23.ActiveCornerRadius = 20
-        Me.BunifuThinButton23.ActiveFillColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton23.ActiveLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.BunifuThinButton23.BackgroundImage = CType(resources.GetObject("BunifuThinButton23.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuThinButton23.ButtonText = "Tambah"
-        Me.BunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuThinButton23.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.IdleBorderThickness = 1
-        Me.BunifuThinButton23.IdleCornerRadius = 20
-        Me.BunifuThinButton23.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.Location = New System.Drawing.Point(35, 340)
-        Me.BunifuThinButton23.Margin = New System.Windows.Forms.Padding(5)
-        Me.BunifuThinButton23.Name = "BunifuThinButton23"
-        Me.BunifuThinButton23.Size = New System.Drawing.Size(91, 41)
-        Me.BunifuThinButton23.TabIndex = 18
-        Me.BunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_tambahkonsumen.ActiveBorderThickness = 1
+        Me.btn_tambahkonsumen.ActiveCornerRadius = 20
+        Me.btn_tambahkonsumen.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.btn_tambahkonsumen.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_tambahkonsumen.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_tambahkonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btn_tambahkonsumen.BackgroundImage = CType(resources.GetObject("btn_tambahkonsumen.BackgroundImage"), System.Drawing.Image)
+        Me.btn_tambahkonsumen.ButtonText = "Tambah"
+        Me.btn_tambahkonsumen.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_tambahkonsumen.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tambahkonsumen.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_tambahkonsumen.IdleBorderThickness = 1
+        Me.btn_tambahkonsumen.IdleCornerRadius = 20
+        Me.btn_tambahkonsumen.IdleFillColor = System.Drawing.Color.White
+        Me.btn_tambahkonsumen.IdleForecolor = System.Drawing.Color.SeaGreen
+        Me.btn_tambahkonsumen.IdleLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_tambahkonsumen.Location = New System.Drawing.Point(36, 360)
+        Me.btn_tambahkonsumen.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_tambahkonsumen.Name = "btn_tambahkonsumen"
+        Me.btn_tambahkonsumen.Size = New System.Drawing.Size(91, 41)
+        Me.btn_tambahkonsumen.TabIndex = 18
+        Me.btn_tambahkonsumen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TextBox20
         '
         Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.Location = New System.Drawing.Point(189, 257)
+        Me.TextBox20.Location = New System.Drawing.Point(189, 292)
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.Size = New System.Drawing.Size(186, 22)
         Me.TextBox20.TabIndex = 14
@@ -1535,7 +1622,7 @@ Partial Class Dashboard
         Me.MaterialLabel29.Depth = 0
         Me.MaterialLabel29.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel29.Location = New System.Drawing.Point(32, 258)
+        Me.MaterialLabel29.Location = New System.Drawing.Point(32, 292)
         Me.MaterialLabel29.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel29.Name = "MaterialLabel29"
         Me.MaterialLabel29.Size = New System.Drawing.Size(40, 19)
@@ -1545,7 +1632,7 @@ Partial Class Dashboard
         'TextBox19
         '
         Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox19.Location = New System.Drawing.Point(189, 224)
+        Me.TextBox19.Location = New System.Drawing.Point(189, 259)
         Me.TextBox19.Name = "TextBox19"
         Me.TextBox19.Size = New System.Drawing.Size(186, 22)
         Me.TextBox19.TabIndex = 12
@@ -1556,7 +1643,7 @@ Partial Class Dashboard
         Me.MaterialLabel28.Depth = 0
         Me.MaterialLabel28.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel28.Location = New System.Drawing.Point(32, 225)
+        Me.MaterialLabel28.Location = New System.Drawing.Point(32, 259)
         Me.MaterialLabel28.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel28.Name = "MaterialLabel28"
         Me.MaterialLabel28.Size = New System.Drawing.Size(57, 19)
@@ -1566,7 +1653,7 @@ Partial Class Dashboard
         'TextBox18
         '
         Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox18.Location = New System.Drawing.Point(189, 190)
+        Me.TextBox18.Location = New System.Drawing.Point(189, 226)
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.Size = New System.Drawing.Size(186, 22)
         Me.TextBox18.TabIndex = 10
@@ -1577,7 +1664,7 @@ Partial Class Dashboard
         Me.MaterialLabel26.Depth = 0
         Me.MaterialLabel26.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel26.Location = New System.Drawing.Point(32, 191)
+        Me.MaterialLabel26.Location = New System.Drawing.Point(32, 226)
         Me.MaterialLabel26.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel26.Name = "MaterialLabel26"
         Me.MaterialLabel26.Size = New System.Drawing.Size(97, 19)
@@ -1590,25 +1677,17 @@ Partial Class Dashboard
         Me.MaterialLabel27.Depth = 0
         Me.MaterialLabel27.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel27.Location = New System.Drawing.Point(32, 158)
+        Me.MaterialLabel27.Location = New System.Drawing.Point(32, 193)
         Me.MaterialLabel27.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel27.Name = "MaterialLabel27"
         Me.MaterialLabel27.Size = New System.Drawing.Size(95, 19)
         Me.MaterialLabel27.TabIndex = 7
         Me.MaterialLabel27.Text = "Tanggal lahir"
         '
-        'TextBox17
-        '
-        Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.Location = New System.Drawing.Point(189, 158)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(186, 22)
-        Me.TextBox17.TabIndex = 8
-        '
         'TextBox16
         '
         Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox16.Location = New System.Drawing.Point(189, 125)
+        Me.TextBox16.Location = New System.Drawing.Point(189, 127)
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.Size = New System.Drawing.Size(186, 22)
         Me.TextBox16.TabIndex = 6
@@ -1626,6 +1705,14 @@ Partial Class Dashboard
         Me.MaterialLabel25.TabIndex = 5
         Me.MaterialLabel25.Text = "Nama"
         '
+        'TextBox15
+        '
+        Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox15.Location = New System.Drawing.Point(189, 94)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(186, 22)
+        Me.TextBox15.TabIndex = 4
+        '
         'MaterialLabel24
         '
         Me.MaterialLabel24.AutoSize = True
@@ -1639,17 +1726,13 @@ Partial Class Dashboard
         Me.MaterialLabel24.TabIndex = 2
         Me.MaterialLabel24.Text = "Id Konsumen"
         '
-        'TextBox15
-        '
-        Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.Location = New System.Drawing.Point(189, 94)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(186, 22)
-        Me.TextBox15.TabIndex = 4
-        '
         'PanelPegawai
         '
         Me.PanelPegawai.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.PanelPegawai.Controls.Add(Me.RB_Ppeg)
+        Me.PanelPegawai.Controls.Add(Me.RB_Lpeg)
+        Me.PanelPegawai.Controls.Add(Me.MaterialLabel43)
+        Me.PanelPegawai.Controls.Add(Me.DateTimePicker5)
         Me.PanelPegawai.Controls.Add(Me.lvpegawai)
         Me.PanelPegawai.Controls.Add(Me.BunifuThinButton24)
         Me.PanelPegawai.Controls.Add(Me.btnsimpan_pegawai)
@@ -1663,7 +1746,6 @@ Partial Class Dashboard
         Me.PanelPegawai.Controls.Add(Me.MaterialLabel35)
         Me.PanelPegawai.Controls.Add(Me.TextBox25)
         Me.PanelPegawai.Controls.Add(Me.MaterialLabel34)
-        Me.PanelPegawai.Controls.Add(Me.TextBox24)
         Me.PanelPegawai.Controls.Add(Me.MaterialLabel33)
         Me.PanelPegawai.Controls.Add(Me.TextBox23)
         Me.PanelPegawai.Controls.Add(Me.MaterialLabel32)
@@ -1675,14 +1757,59 @@ Partial Class Dashboard
         Me.PanelPegawai.Size = New System.Drawing.Size(1055, 637)
         Me.PanelPegawai.TabIndex = 1
         '
+        'RB_Ppeg
+        '
+        Me.RB_Ppeg.AutoSize = True
+        Me.RB_Ppeg.Location = New System.Drawing.Point(297, 160)
+        Me.RB_Ppeg.Name = "RB_Ppeg"
+        Me.RB_Ppeg.Size = New System.Drawing.Size(79, 17)
+        Me.RB_Ppeg.TabIndex = 35
+        Me.RB_Ppeg.TabStop = True
+        Me.RB_Ppeg.Text = "Perempuan"
+        Me.RB_Ppeg.UseVisualStyleBackColor = True
+        '
+        'RB_Lpeg
+        '
+        Me.RB_Lpeg.AutoSize = True
+        Me.RB_Lpeg.Location = New System.Drawing.Point(189, 160)
+        Me.RB_Lpeg.Name = "RB_Lpeg"
+        Me.RB_Lpeg.Size = New System.Drawing.Size(64, 17)
+        Me.RB_Lpeg.TabIndex = 34
+        Me.RB_Lpeg.TabStop = True
+        Me.RB_Lpeg.Text = "Laki-laki"
+        Me.RB_Lpeg.UseVisualStyleBackColor = True
+        '
+        'MaterialLabel43
+        '
+        Me.MaterialLabel43.AutoSize = True
+        Me.MaterialLabel43.Depth = 0
+        Me.MaterialLabel43.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel43.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel43.Location = New System.Drawing.Point(32, 160)
+        Me.MaterialLabel43.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel43.Name = "MaterialLabel43"
+        Me.MaterialLabel43.Size = New System.Drawing.Size(103, 19)
+        Me.MaterialLabel43.TabIndex = 33
+        Me.MaterialLabel43.Text = "Jenis Kelamin"
+        '
+        'DateTimePicker5
+        '
+        Me.DateTimePicker5.CustomFormat = ""
+        Me.DateTimePicker5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker5.Location = New System.Drawing.Point(190, 193)
+        Me.DateTimePicker5.Name = "DateTimePicker5"
+        Me.DateTimePicker5.Size = New System.Drawing.Size(186, 22)
+        Me.DateTimePicker5.TabIndex = 32
+        Me.DateTimePicker5.Value = New Date(2017, 12, 29, 0, 0, 0, 0)
+        '
         'lvpegawai
         '
         Me.lvpegawai.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7})
         Me.lvpegawai.FullRowSelect = True
         Me.lvpegawai.GridLines = True
-        Me.lvpegawai.Location = New System.Drawing.Point(36, 365)
+        Me.lvpegawai.Location = New System.Drawing.Point(35, 437)
         Me.lvpegawai.Name = "lvpegawai"
-        Me.lvpegawai.Size = New System.Drawing.Size(801, 180)
+        Me.lvpegawai.Size = New System.Drawing.Size(982, 180)
         Me.lvpegawai.TabIndex = 25
         Me.lvpegawai.UseCompatibleStateImageBehavior = False
         Me.lvpegawai.View = System.Windows.Forms.View.Details
@@ -1699,28 +1826,28 @@ Partial Class Dashboard
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "Tanggal Lahir"
+        Me.ColumnHeader3.Text = "Jenis Kelamin"
         Me.ColumnHeader3.Width = 127
         '
         'ColumnHeader4
         '
-        Me.ColumnHeader4.Text = "Tempat Lahir"
+        Me.ColumnHeader4.Text = "Tanggal Lahir"
         Me.ColumnHeader4.Width = 125
         '
         'ColumnHeader5
         '
-        Me.ColumnHeader5.Text = "Alamat"
+        Me.ColumnHeader5.Text = "Tempat lahir"
         Me.ColumnHeader5.Width = 123
         '
         'ColumnHeader6
         '
-        Me.ColumnHeader6.Text = "No Telepon"
+        Me.ColumnHeader6.Text = "Alamat"
         Me.ColumnHeader6.Width = 90
         '
         'ColumnHeader7
         '
-        Me.ColumnHeader7.Text = "Password"
-        Me.ColumnHeader7.Width = 90
+        Me.ColumnHeader7.Text = "No Telepon"
+        Me.ColumnHeader7.Width = 123
         '
         'BunifuThinButton24
         '
@@ -1740,7 +1867,7 @@ Partial Class Dashboard
         Me.BunifuThinButton24.IdleFillColor = System.Drawing.Color.White
         Me.BunifuThinButton24.IdleForecolor = System.Drawing.Color.SeaGreen
         Me.BunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton24.Location = New System.Drawing.Point(285, 310)
+        Me.BunifuThinButton24.Location = New System.Drawing.Point(285, 362)
         Me.BunifuThinButton24.Margin = New System.Windows.Forms.Padding(5)
         Me.BunifuThinButton24.Name = "BunifuThinButton24"
         Me.BunifuThinButton24.Size = New System.Drawing.Size(91, 41)
@@ -1765,7 +1892,7 @@ Partial Class Dashboard
         Me.btnsimpan_pegawai.IdleFillColor = System.Drawing.Color.White
         Me.btnsimpan_pegawai.IdleForecolor = System.Drawing.Color.SeaGreen
         Me.btnsimpan_pegawai.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.btnsimpan_pegawai.Location = New System.Drawing.Point(165, 310)
+        Me.btnsimpan_pegawai.Location = New System.Drawing.Point(165, 362)
         Me.btnsimpan_pegawai.Margin = New System.Windows.Forms.Padding(5)
         Me.btnsimpan_pegawai.Name = "btnsimpan_pegawai"
         Me.btnsimpan_pegawai.Size = New System.Drawing.Size(91, 41)
@@ -1790,7 +1917,7 @@ Partial Class Dashboard
         Me.BunifuThinButton27.IdleFillColor = System.Drawing.Color.White
         Me.BunifuThinButton27.IdleForecolor = System.Drawing.Color.SeaGreen
         Me.BunifuThinButton27.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton27.Location = New System.Drawing.Point(36, 310)
+        Me.BunifuThinButton27.Location = New System.Drawing.Point(36, 362)
         Me.BunifuThinButton27.Margin = New System.Windows.Forms.Padding(5)
         Me.BunifuThinButton27.Name = "BunifuThinButton27"
         Me.BunifuThinButton27.Size = New System.Drawing.Size(91, 41)
@@ -1803,7 +1930,7 @@ Partial Class Dashboard
         Me.MaterialLabel38.Depth = 0
         Me.MaterialLabel38.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel38.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel38.Location = New System.Drawing.Point(32, 274)
+        Me.MaterialLabel38.Location = New System.Drawing.Point(32, 325)
         Me.MaterialLabel38.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel38.Name = "MaterialLabel38"
         Me.MaterialLabel38.Size = New System.Drawing.Size(75, 19)
@@ -1813,7 +1940,7 @@ Partial Class Dashboard
         'TextBox28
         '
         Me.TextBox28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox28.Location = New System.Drawing.Point(189, 271)
+        Me.TextBox28.Location = New System.Drawing.Point(189, 325)
         Me.TextBox28.Name = "TextBox28"
         Me.TextBox28.Size = New System.Drawing.Size(186, 22)
         Me.TextBox28.TabIndex = 18
@@ -1825,7 +1952,7 @@ Partial Class Dashboard
         Me.MaterialLabel37.Depth = 0
         Me.MaterialLabel37.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel37.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel37.Location = New System.Drawing.Point(32, 245)
+        Me.MaterialLabel37.Location = New System.Drawing.Point(32, 292)
         Me.MaterialLabel37.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel37.Name = "MaterialLabel37"
         Me.MaterialLabel37.Size = New System.Drawing.Size(87, 19)
@@ -1835,7 +1962,7 @@ Partial Class Dashboard
         'TextBox27
         '
         Me.TextBox27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox27.Location = New System.Drawing.Point(189, 242)
+        Me.TextBox27.Location = New System.Drawing.Point(189, 292)
         Me.TextBox27.Name = "TextBox27"
         Me.TextBox27.Size = New System.Drawing.Size(186, 22)
         Me.TextBox27.TabIndex = 16
@@ -1846,7 +1973,7 @@ Partial Class Dashboard
         Me.MaterialLabel36.Depth = 0
         Me.MaterialLabel36.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel36.Location = New System.Drawing.Point(32, 216)
+        Me.MaterialLabel36.Location = New System.Drawing.Point(32, 259)
         Me.MaterialLabel36.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel36.Name = "MaterialLabel36"
         Me.MaterialLabel36.Size = New System.Drawing.Size(57, 19)
@@ -1856,7 +1983,7 @@ Partial Class Dashboard
         'TextBox26
         '
         Me.TextBox26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox26.Location = New System.Drawing.Point(189, 213)
+        Me.TextBox26.Location = New System.Drawing.Point(189, 259)
         Me.TextBox26.Name = "TextBox26"
         Me.TextBox26.Size = New System.Drawing.Size(186, 22)
         Me.TextBox26.TabIndex = 14
@@ -1867,7 +1994,7 @@ Partial Class Dashboard
         Me.MaterialLabel35.Depth = 0
         Me.MaterialLabel35.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel35.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel35.Location = New System.Drawing.Point(32, 189)
+        Me.MaterialLabel35.Location = New System.Drawing.Point(32, 226)
         Me.MaterialLabel35.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel35.Name = "MaterialLabel35"
         Me.MaterialLabel35.Size = New System.Drawing.Size(97, 19)
@@ -1877,7 +2004,7 @@ Partial Class Dashboard
         'TextBox25
         '
         Me.TextBox25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox25.Location = New System.Drawing.Point(189, 184)
+        Me.TextBox25.Location = New System.Drawing.Point(189, 226)
         Me.TextBox25.Name = "TextBox25"
         Me.TextBox25.Size = New System.Drawing.Size(186, 22)
         Me.TextBox25.TabIndex = 12
@@ -1888,20 +2015,12 @@ Partial Class Dashboard
         Me.MaterialLabel34.Depth = 0
         Me.MaterialLabel34.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel34.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel34.Location = New System.Drawing.Point(32, 159)
+        Me.MaterialLabel34.Location = New System.Drawing.Point(32, 193)
         Me.MaterialLabel34.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel34.Name = "MaterialLabel34"
         Me.MaterialLabel34.Size = New System.Drawing.Size(99, 19)
         Me.MaterialLabel34.TabIndex = 9
         Me.MaterialLabel34.Text = "Tanggal Lahir"
-        '
-        'TextBox24
-        '
-        Me.TextBox24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox24.Location = New System.Drawing.Point(189, 155)
-        Me.TextBox24.Name = "TextBox24"
-        Me.TextBox24.Size = New System.Drawing.Size(186, 22)
-        Me.TextBox24.TabIndex = 10
         '
         'MaterialLabel33
         '
@@ -1919,7 +2038,7 @@ Partial Class Dashboard
         'TextBox23
         '
         Me.TextBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox23.Location = New System.Drawing.Point(189, 124)
+        Me.TextBox23.Location = New System.Drawing.Point(189, 127)
         Me.TextBox23.Name = "TextBox23"
         Me.TextBox23.Size = New System.Drawing.Size(186, 22)
         Me.TextBox23.TabIndex = 8
@@ -1930,7 +2049,7 @@ Partial Class Dashboard
         Me.MaterialLabel32.Depth = 0
         Me.MaterialLabel32.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel32.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel32.Location = New System.Drawing.Point(32, 97)
+        Me.MaterialLabel32.Location = New System.Drawing.Point(32, 94)
         Me.MaterialLabel32.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel32.Name = "MaterialLabel32"
         Me.MaterialLabel32.Size = New System.Drawing.Size(81, 19)
@@ -1951,7 +2070,7 @@ Partial Class Dashboard
         Me.MaterialLabel31.Depth = 0
         Me.MaterialLabel31.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel31.Location = New System.Drawing.Point(6, 30)
+        Me.MaterialLabel31.Location = New System.Drawing.Point(17, 27)
         Me.MaterialLabel31.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel31.Name = "MaterialLabel31"
         Me.MaterialLabel31.Size = New System.Drawing.Size(65, 19)
@@ -1964,10 +2083,10 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelUtama.BackColor = System.Drawing.Color.SkyBlue
-        Me.PanelUtama.Controls.Add(Me.PanelReservasi)
         Me.PanelUtama.Controls.Add(Me.Panelkonsumen)
-        Me.PanelUtama.Controls.Add(Me.PanelKamar)
         Me.PanelUtama.Controls.Add(Me.PanelPegawai)
+        Me.PanelUtama.Controls.Add(Me.PanelReservasi)
+        Me.PanelUtama.Controls.Add(Me.PanelKamar)
         Me.PanelUtama.Controls.Add(Me.PanelPencarian)
         Me.PanelUtama.Controls.Add(Me.PanelLaporan)
         Me.PanelUtama.Controls.Add(Me.Menu_Utama)
@@ -2081,14 +2200,13 @@ Partial Class Dashboard
     Friend WithEvents TextBox18 As TextBox
     Friend WithEvents MaterialLabel26 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel27 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents TextBox17 As TextBox
     Friend WithEvents TextBox16 As TextBox
     Friend WithEvents MaterialLabel25 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel24 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents BunifuThinButton25 As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents btn_batalkonsumen As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents btnsimpankonsumen As Bunifu.Framework.UI.BunifuThinButton2
-    Friend WithEvents BunifuThinButton23 As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents btn_tambahkonsumen As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents TextBox21 As TextBox
     Friend WithEvents MaterialLabel30 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents PanelPegawai As Panel
@@ -2102,7 +2220,6 @@ Partial Class Dashboard
     Friend WithEvents MaterialLabel35 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TextBox25 As TextBox
     Friend WithEvents MaterialLabel34 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents TextBox24 As TextBox
     Friend WithEvents MaterialLabel33 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TextBox23 As TextBox
     Friend WithEvents MaterialLabel38 As MaterialSkin.Controls.MaterialLabel
@@ -2144,4 +2261,14 @@ Partial Class Dashboard
     Friend WithEvents ColumnHeader16 As ColumnHeader
     Friend WithEvents ColumnHeader17 As ColumnHeader
     Friend WithEvents ColumnHeader18 As ColumnHeader
+    Friend WithEvents DateTimePicker4 As DateTimePicker
+    Friend WithEvents DateTimePicker5 As DateTimePicker
+    Friend WithEvents MaterialLabel43 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents RB_Ppeg As RadioButton
+    Friend WithEvents RB_Lpeg As RadioButton
+    Friend WithEvents RB_Pkons As RadioButton
+    Friend WithEvents RB_Lkons As RadioButton
+    Friend WithEvents MaterialLabel44 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents ColumnHeader19 As ColumnHeader
+    Friend WithEvents btn_hapuskonsumen As Bunifu.Framework.UI.BunifuThinButton2
 End Class

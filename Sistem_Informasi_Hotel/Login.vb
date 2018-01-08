@@ -85,4 +85,7 @@ Public Class Login
 
         End Sub
 
+    Private Sub txtuname_Click(sender As Object, e As EventArgs) Handles txtuname.Click
+
+    End Sub
 End Class
