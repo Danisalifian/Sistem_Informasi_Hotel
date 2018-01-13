@@ -24,6 +24,8 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Menu_Utama = New Bunifu.Framework.UI.BunifuCards()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.strid = New Bunifu.Framework.UI.BunifuCustomLabel()
@@ -82,6 +84,9 @@ Partial Class Dashboard
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnsimpan_reservasi = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.PanelKamar = New System.Windows.Forms.Panel()
+        Me.DGV_kamar = New System.Windows.Forms.DataGridView()
+        Me.btn_hapuskamar = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.btn_ubahkamar = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.lvkamar = New System.Windows.Forms.ListView()
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -102,8 +107,15 @@ Partial Class Dashboard
         Me.PanelPencarian = New System.Windows.Forms.Panel()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.PanelLaporan = New System.Windows.Forms.Panel()
+        Me.TabLaporan = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         Me.Panelkonsumen = New System.Windows.Forms.Panel()
+        Me.btn_ubahkonsumen = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.BunifuThinButton23 = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.DGV_konsumen = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.btn_hapuskonsumen = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.RB_Pkons = New System.Windows.Forms.RadioButton()
         Me.RB_Lkons = New System.Windows.Forms.RadioButton()
@@ -136,6 +148,8 @@ Partial Class Dashboard
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel24 = New MaterialSkin.Controls.MaterialLabel()
         Me.PanelPegawai = New System.Windows.Forms.Panel()
+        Me.btn_ubahpegawai = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.btn_hapuspegawai = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.RB_Ppeg = New System.Windows.Forms.RadioButton()
         Me.RB_Lpeg = New System.Windows.Forms.RadioButton()
         Me.MaterialLabel43 = New MaterialSkin.Controls.MaterialLabel()
@@ -173,9 +187,12 @@ Partial Class Dashboard
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.PanelKamar.SuspendLayout()
+        CType(Me.DGV_kamar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelPencarian.SuspendLayout()
         Me.PanelLaporan.SuspendLayout()
+        Me.TabLaporan.SuspendLayout()
         Me.Panelkonsumen.SuspendLayout()
+        CType(Me.DGV_konsumen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelPegawai.SuspendLayout()
         Me.PanelUtama.SuspendLayout()
         Me.SuspendLayout()
@@ -1075,6 +1092,9 @@ Partial Class Dashboard
         'PanelKamar
         '
         Me.PanelKamar.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.PanelKamar.Controls.Add(Me.DGV_kamar)
+        Me.PanelKamar.Controls.Add(Me.btn_hapuskamar)
+        Me.PanelKamar.Controls.Add(Me.btn_ubahkamar)
         Me.PanelKamar.Controls.Add(Me.lvkamar)
         Me.PanelKamar.Controls.Add(Me.BunifuThinButton26)
         Me.PanelKamar.Controls.Add(Me.btnsimpan_kamar)
@@ -1093,6 +1113,64 @@ Partial Class Dashboard
         Me.PanelKamar.Name = "PanelKamar"
         Me.PanelKamar.Size = New System.Drawing.Size(1055, 637)
         Me.PanelKamar.TabIndex = 1
+        '
+        'DGV_kamar
+        '
+        Me.DGV_kamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV_kamar.Location = New System.Drawing.Point(382, 95)
+        Me.DGV_kamar.Name = "DGV_kamar"
+        Me.DGV_kamar.Size = New System.Drawing.Size(661, 150)
+        Me.DGV_kamar.TabIndex = 30
+        '
+        'btn_hapuskamar
+        '
+        Me.btn_hapuskamar.ActiveBorderThickness = 1
+        Me.btn_hapuskamar.ActiveCornerRadius = 20
+        Me.btn_hapuskamar.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuskamar.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_hapuskamar.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuskamar.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btn_hapuskamar.BackgroundImage = CType(resources.GetObject("btn_hapuskamar.BackgroundImage"), System.Drawing.Image)
+        Me.btn_hapuskamar.ButtonText = "Hapus"
+        Me.btn_hapuskamar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_hapuskamar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_hapuskamar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuskamar.IdleBorderThickness = 1
+        Me.btn_hapuskamar.IdleCornerRadius = 20
+        Me.btn_hapuskamar.IdleFillColor = System.Drawing.Color.White
+        Me.btn_hapuskamar.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuskamar.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuskamar.Location = New System.Drawing.Point(552, 325)
+        Me.btn_hapuskamar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_hapuskamar.Name = "btn_hapuskamar"
+        Me.btn_hapuskamar.Size = New System.Drawing.Size(91, 41)
+        Me.btn_hapuskamar.TabIndex = 29
+        Me.btn_hapuskamar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btn_ubahkamar
+        '
+        Me.btn_ubahkamar.ActiveBorderThickness = 1
+        Me.btn_ubahkamar.ActiveCornerRadius = 20
+        Me.btn_ubahkamar.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahkamar.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_ubahkamar.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahkamar.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btn_ubahkamar.BackgroundImage = CType(resources.GetObject("btn_ubahkamar.BackgroundImage"), System.Drawing.Image)
+        Me.btn_ubahkamar.ButtonText = "Ubah"
+        Me.btn_ubahkamar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_ubahkamar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ubahkamar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahkamar.IdleBorderThickness = 1
+        Me.btn_ubahkamar.IdleCornerRadius = 20
+        Me.btn_ubahkamar.IdleFillColor = System.Drawing.Color.White
+        Me.btn_ubahkamar.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahkamar.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahkamar.Location = New System.Drawing.Point(423, 325)
+        Me.btn_ubahkamar.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_ubahkamar.Name = "btn_ubahkamar"
+        Me.btn_ubahkamar.Size = New System.Drawing.Size(91, 41)
+        Me.btn_ubahkamar.TabIndex = 28
+        Me.btn_ubahkamar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lvkamar
         '
@@ -1130,21 +1208,21 @@ Partial Class Dashboard
         '
         Me.BunifuThinButton26.ActiveBorderThickness = 1
         Me.BunifuThinButton26.ActiveCornerRadius = 20
-        Me.BunifuThinButton26.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton26.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton26.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton26.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton26.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton26.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.BunifuThinButton26.BackgroundImage = CType(resources.GetObject("BunifuThinButton26.BackgroundImage"), System.Drawing.Image)
         Me.BunifuThinButton26.ButtonText = "Batal"
         Me.BunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuThinButton26.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton26.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton26.IdleBorderThickness = 1
         Me.BunifuThinButton26.IdleCornerRadius = 20
         Me.BunifuThinButton26.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton26.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton26.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton26.Location = New System.Drawing.Point(284, 325)
+        Me.BunifuThinButton26.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton26.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton26.Location = New System.Drawing.Point(294, 325)
         Me.BunifuThinButton26.Margin = New System.Windows.Forms.Padding(5)
         Me.BunifuThinButton26.Name = "BunifuThinButton26"
         Me.BunifuThinButton26.Size = New System.Drawing.Size(91, 41)
@@ -1155,21 +1233,21 @@ Partial Class Dashboard
         '
         Me.btnsimpan_kamar.ActiveBorderThickness = 1
         Me.btnsimpan_kamar.ActiveCornerRadius = 20
-        Me.btnsimpan_kamar.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpan_kamar.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpan_kamar.ActiveForecolor = System.Drawing.Color.White
-        Me.btnsimpan_kamar.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpan_kamar.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpan_kamar.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.btnsimpan_kamar.BackgroundImage = CType(resources.GetObject("btnsimpan_kamar.BackgroundImage"), System.Drawing.Image)
         Me.btnsimpan_kamar.ButtonText = "Simpan"
         Me.btnsimpan_kamar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnsimpan_kamar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsimpan_kamar.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpan_kamar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpan_kamar.IdleBorderThickness = 1
         Me.btnsimpan_kamar.IdleCornerRadius = 20
         Me.btnsimpan_kamar.IdleFillColor = System.Drawing.Color.White
-        Me.btnsimpan_kamar.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.btnsimpan_kamar.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.btnsimpan_kamar.Location = New System.Drawing.Point(164, 325)
+        Me.btnsimpan_kamar.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnsimpan_kamar.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnsimpan_kamar.Location = New System.Drawing.Point(165, 325)
         Me.btnsimpan_kamar.Margin = New System.Windows.Forms.Padding(5)
         Me.btnsimpan_kamar.Name = "btnsimpan_kamar"
         Me.btnsimpan_kamar.Size = New System.Drawing.Size(91, 41)
@@ -1180,21 +1258,21 @@ Partial Class Dashboard
         '
         Me.BunifuThinButton29.ActiveBorderThickness = 1
         Me.BunifuThinButton29.ActiveCornerRadius = 20
-        Me.BunifuThinButton29.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton29.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton29.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton29.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton29.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton29.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.BunifuThinButton29.BackgroundImage = CType(resources.GetObject("BunifuThinButton29.BackgroundImage"), System.Drawing.Image)
         Me.BunifuThinButton29.ButtonText = "Tambah"
         Me.BunifuThinButton29.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuThinButton29.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton29.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton29.IdleBorderThickness = 1
         Me.BunifuThinButton29.IdleCornerRadius = 20
         Me.BunifuThinButton29.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton29.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton29.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton29.Location = New System.Drawing.Point(35, 325)
+        Me.BunifuThinButton29.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton29.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton29.Location = New System.Drawing.Point(36, 325)
         Me.BunifuThinButton29.Margin = New System.Windows.Forms.Padding(5)
         Me.BunifuThinButton29.Name = "BunifuThinButton29"
         Me.BunifuThinButton29.Size = New System.Drawing.Size(91, 41)
@@ -1325,12 +1403,57 @@ Partial Class Dashboard
         'PanelLaporan
         '
         Me.PanelLaporan.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.PanelLaporan.Controls.Add(Me.TabLaporan)
         Me.PanelLaporan.Controls.Add(Me.MaterialLabel4)
         Me.PanelLaporan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelLaporan.Location = New System.Drawing.Point(225, 0)
         Me.PanelLaporan.Name = "PanelLaporan"
         Me.PanelLaporan.Size = New System.Drawing.Size(1055, 637)
         Me.PanelLaporan.TabIndex = 1
+        '
+        'TabLaporan
+        '
+        Me.TabLaporan.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabLaporan.Controls.Add(Me.TabPage1)
+        Me.TabLaporan.Controls.Add(Me.TabPage2)
+        Me.TabLaporan.Controls.Add(Me.TabPage3)
+        Me.TabLaporan.Location = New System.Drawing.Point(21, 70)
+        Me.TabLaporan.Name = "TabLaporan"
+        Me.TabLaporan.SelectedIndex = 0
+        Me.TabLaporan.Size = New System.Drawing.Size(1022, 363)
+        Me.TabLaporan.TabIndex = 1
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(1014, 337)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Data Reservasi"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1014, 337)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Data Pembayaran"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(1014, 337)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'MaterialLabel4
         '
@@ -1348,6 +1471,9 @@ Partial Class Dashboard
         'Panelkonsumen
         '
         Me.Panelkonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.Panelkonsumen.Controls.Add(Me.btn_ubahkonsumen)
+        Me.Panelkonsumen.Controls.Add(Me.BunifuThinButton23)
+        Me.Panelkonsumen.Controls.Add(Me.DGV_konsumen)
         Me.Panelkonsumen.Controls.Add(Me.btn_hapuskonsumen)
         Me.Panelkonsumen.Controls.Add(Me.RB_Pkons)
         Me.Panelkonsumen.Controls.Add(Me.RB_Lkons)
@@ -1377,25 +1503,114 @@ Partial Class Dashboard
         Me.Panelkonsumen.Size = New System.Drawing.Size(1055, 637)
         Me.Panelkonsumen.TabIndex = 1
         '
+        'btn_ubahkonsumen
+        '
+        Me.btn_ubahkonsumen.ActiveBorderThickness = 1
+        Me.btn_ubahkonsumen.ActiveCornerRadius = 20
+        Me.btn_ubahkonsumen.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahkonsumen.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_ubahkonsumen.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahkonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btn_ubahkonsumen.BackgroundImage = CType(resources.GetObject("btn_ubahkonsumen.BackgroundImage"), System.Drawing.Image)
+        Me.btn_ubahkonsumen.ButtonText = "Ubah"
+        Me.btn_ubahkonsumen.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_ubahkonsumen.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ubahkonsumen.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_ubahkonsumen.IdleBorderThickness = 1
+        Me.btn_ubahkonsumen.IdleCornerRadius = 20
+        Me.btn_ubahkonsumen.IdleFillColor = System.Drawing.Color.White
+        Me.btn_ubahkonsumen.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahkonsumen.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahkonsumen.Location = New System.Drawing.Point(423, 360)
+        Me.btn_ubahkonsumen.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_ubahkonsumen.Name = "btn_ubahkonsumen"
+        Me.btn_ubahkonsumen.Size = New System.Drawing.Size(91, 41)
+        Me.btn_ubahkonsumen.TabIndex = 36
+        Me.btn_ubahkonsumen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BunifuThinButton23
+        '
+        Me.BunifuThinButton23.ActiveBorderThickness = 1
+        Me.BunifuThinButton23.ActiveCornerRadius = 20
+        Me.BunifuThinButton23.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton23.ActiveForecolor = System.Drawing.Color.White
+        Me.BunifuThinButton23.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.BunifuThinButton23.BackgroundImage = CType(resources.GetObject("BunifuThinButton23.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuThinButton23.ButtonText = "Multiple Hapus"
+        Me.BunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuThinButton23.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton23.IdleBorderThickness = 1
+        Me.BunifuThinButton23.IdleCornerRadius = 20
+        Me.BunifuThinButton23.IdleFillColor = System.Drawing.Color.White
+        Me.BunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton23.Location = New System.Drawing.Point(660, 256)
+        Me.BunifuThinButton23.Margin = New System.Windows.Forms.Padding(5)
+        Me.BunifuThinButton23.Name = "BunifuThinButton23"
+        Me.BunifuThinButton23.Size = New System.Drawing.Size(154, 41)
+        Me.BunifuThinButton23.TabIndex = 35
+        Me.BunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'DGV_konsumen
+        '
+        Me.DGV_konsumen.AllowUserToAddRows = False
+        Me.DGV_konsumen.AllowUserToDeleteRows = False
+        Me.DGV_konsumen.AllowUserToResizeColumns = False
+        Me.DGV_konsumen.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DGV_konsumen.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGV_konsumen.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DGV_konsumen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_konsumen.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGV_konsumen.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGV_konsumen.CausesValidation = False
+        Me.DGV_konsumen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(159, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_konsumen.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DGV_konsumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DGV_konsumen.DoubleBuffered = True
+        Me.DGV_konsumen.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.DGV_konsumen.EnableHeadersVisualStyles = False
+        Me.DGV_konsumen.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.DGV_konsumen.HeaderForeColor = System.Drawing.Color.White
+        Me.DGV_konsumen.Location = New System.Drawing.Point(36, 414)
+        Me.DGV_konsumen.Name = "DGV_konsumen"
+        Me.DGV_konsumen.ReadOnly = True
+        Me.DGV_konsumen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGV_konsumen.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.DGV_konsumen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_konsumen.Size = New System.Drawing.Size(981, 192)
+        Me.DGV_konsumen.TabIndex = 34
+        '
         'btn_hapuskonsumen
         '
         Me.btn_hapuskonsumen.ActiveBorderThickness = 1
         Me.btn_hapuskonsumen.ActiveCornerRadius = 20
-        Me.btn_hapuskonsumen.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.btn_hapuskonsumen.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_hapuskonsumen.ActiveForecolor = System.Drawing.Color.White
-        Me.btn_hapuskonsumen.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_hapuskonsumen.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_hapuskonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.btn_hapuskonsumen.BackgroundImage = CType(resources.GetObject("btn_hapuskonsumen.BackgroundImage"), System.Drawing.Image)
         Me.btn_hapuskonsumen.ButtonText = "Hapus"
         Me.btn_hapuskonsumen.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_hapuskonsumen.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_hapuskonsumen.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_hapuskonsumen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_hapuskonsumen.IdleBorderThickness = 1
         Me.btn_hapuskonsumen.IdleCornerRadius = 20
         Me.btn_hapuskonsumen.IdleFillColor = System.Drawing.Color.White
-        Me.btn_hapuskonsumen.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.btn_hapuskonsumen.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.btn_hapuskonsumen.Location = New System.Drawing.Point(419, 362)
+        Me.btn_hapuskonsumen.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuskonsumen.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuskonsumen.Location = New System.Drawing.Point(552, 360)
         Me.btn_hapuskonsumen.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_hapuskonsumen.Name = "btn_hapuskonsumen"
         Me.btn_hapuskonsumen.Size = New System.Drawing.Size(91, 41)
@@ -1452,9 +1667,9 @@ Partial Class Dashboard
         Me.lvkonsumen.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader18, Me.ColumnHeader19})
         Me.lvkonsumen.FullRowSelect = True
         Me.lvkonsumen.GridLines = True
-        Me.lvkonsumen.Location = New System.Drawing.Point(36, 419)
+        Me.lvkonsumen.Location = New System.Drawing.Point(400, 50)
         Me.lvkonsumen.Name = "lvkonsumen"
-        Me.lvkonsumen.Size = New System.Drawing.Size(947, 206)
+        Me.lvkonsumen.Size = New System.Drawing.Size(643, 206)
         Me.lvkonsumen.TabIndex = 28
         Me.lvkonsumen.UseCompatibleStateImageBehavior = False
         Me.lvkonsumen.View = System.Windows.Forms.View.Details
@@ -1537,21 +1752,21 @@ Partial Class Dashboard
         '
         Me.btn_batalkonsumen.ActiveBorderThickness = 1
         Me.btn_batalkonsumen.ActiveCornerRadius = 20
-        Me.btn_batalkonsumen.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.btn_batalkonsumen.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_batalkonsumen.ActiveForecolor = System.Drawing.Color.White
-        Me.btn_batalkonsumen.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_batalkonsumen.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_batalkonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.btn_batalkonsumen.BackgroundImage = CType(resources.GetObject("btn_batalkonsumen.BackgroundImage"), System.Drawing.Image)
         Me.btn_batalkonsumen.ButtonText = "Batal"
         Me.btn_batalkonsumen.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_batalkonsumen.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_batalkonsumen.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_batalkonsumen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_batalkonsumen.IdleBorderThickness = 1
         Me.btn_batalkonsumen.IdleCornerRadius = 20
         Me.btn_batalkonsumen.IdleFillColor = System.Drawing.Color.White
-        Me.btn_batalkonsumen.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.btn_batalkonsumen.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.btn_batalkonsumen.Location = New System.Drawing.Point(285, 360)
+        Me.btn_batalkonsumen.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_batalkonsumen.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_batalkonsumen.Location = New System.Drawing.Point(294, 360)
         Me.btn_batalkonsumen.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_batalkonsumen.Name = "btn_batalkonsumen"
         Me.btn_batalkonsumen.Size = New System.Drawing.Size(91, 41)
@@ -1562,20 +1777,20 @@ Partial Class Dashboard
         '
         Me.btnsimpankonsumen.ActiveBorderThickness = 1
         Me.btnsimpankonsumen.ActiveCornerRadius = 20
-        Me.btnsimpankonsumen.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpankonsumen.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpankonsumen.ActiveForecolor = System.Drawing.Color.White
-        Me.btnsimpankonsumen.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpankonsumen.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpankonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.btnsimpankonsumen.BackgroundImage = CType(resources.GetObject("btnsimpankonsumen.BackgroundImage"), System.Drawing.Image)
         Me.btnsimpankonsumen.ButtonText = "Simpan"
         Me.btnsimpankonsumen.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnsimpankonsumen.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsimpankonsumen.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpankonsumen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpankonsumen.IdleBorderThickness = 1
         Me.btnsimpankonsumen.IdleCornerRadius = 20
         Me.btnsimpankonsumen.IdleFillColor = System.Drawing.Color.White
-        Me.btnsimpankonsumen.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.btnsimpankonsumen.IdleLineColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpankonsumen.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnsimpankonsumen.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpankonsumen.Location = New System.Drawing.Point(165, 360)
         Me.btnsimpankonsumen.Margin = New System.Windows.Forms.Padding(5)
         Me.btnsimpankonsumen.Name = "btnsimpankonsumen"
@@ -1587,20 +1802,20 @@ Partial Class Dashboard
         '
         Me.btn_tambahkonsumen.ActiveBorderThickness = 1
         Me.btn_tambahkonsumen.ActiveCornerRadius = 20
-        Me.btn_tambahkonsumen.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.btn_tambahkonsumen.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_tambahkonsumen.ActiveForecolor = System.Drawing.Color.White
-        Me.btn_tambahkonsumen.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_tambahkonsumen.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_tambahkonsumen.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.btn_tambahkonsumen.BackgroundImage = CType(resources.GetObject("btn_tambahkonsumen.BackgroundImage"), System.Drawing.Image)
         Me.btn_tambahkonsumen.ButtonText = "Tambah"
         Me.btn_tambahkonsumen.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_tambahkonsumen.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_tambahkonsumen.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_tambahkonsumen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_tambahkonsumen.IdleBorderThickness = 1
         Me.btn_tambahkonsumen.IdleCornerRadius = 20
         Me.btn_tambahkonsumen.IdleFillColor = System.Drawing.Color.White
-        Me.btn_tambahkonsumen.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.btn_tambahkonsumen.IdleLineColor = System.Drawing.Color.SeaGreen
+        Me.btn_tambahkonsumen.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_tambahkonsumen.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_tambahkonsumen.Location = New System.Drawing.Point(36, 360)
         Me.btn_tambahkonsumen.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_tambahkonsumen.Name = "btn_tambahkonsumen"
@@ -1729,6 +1944,8 @@ Partial Class Dashboard
         'PanelPegawai
         '
         Me.PanelPegawai.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.PanelPegawai.Controls.Add(Me.btn_ubahpegawai)
+        Me.PanelPegawai.Controls.Add(Me.btn_hapuspegawai)
         Me.PanelPegawai.Controls.Add(Me.RB_Ppeg)
         Me.PanelPegawai.Controls.Add(Me.RB_Lpeg)
         Me.PanelPegawai.Controls.Add(Me.MaterialLabel43)
@@ -1756,6 +1973,56 @@ Partial Class Dashboard
         Me.PanelPegawai.Name = "PanelPegawai"
         Me.PanelPegawai.Size = New System.Drawing.Size(1055, 637)
         Me.PanelPegawai.TabIndex = 1
+        '
+        'btn_ubahpegawai
+        '
+        Me.btn_ubahpegawai.ActiveBorderThickness = 1
+        Me.btn_ubahpegawai.ActiveCornerRadius = 20
+        Me.btn_ubahpegawai.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahpegawai.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_ubahpegawai.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahpegawai.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btn_ubahpegawai.BackgroundImage = CType(resources.GetObject("btn_ubahpegawai.BackgroundImage"), System.Drawing.Image)
+        Me.btn_ubahpegawai.ButtonText = "Ubah"
+        Me.btn_ubahpegawai.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_ubahpegawai.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ubahpegawai.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahpegawai.IdleBorderThickness = 1
+        Me.btn_ubahpegawai.IdleCornerRadius = 20
+        Me.btn_ubahpegawai.IdleFillColor = System.Drawing.Color.White
+        Me.btn_ubahpegawai.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahpegawai.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_ubahpegawai.Location = New System.Drawing.Point(552, 365)
+        Me.btn_ubahpegawai.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_ubahpegawai.Name = "btn_ubahpegawai"
+        Me.btn_ubahpegawai.Size = New System.Drawing.Size(91, 41)
+        Me.btn_ubahpegawai.TabIndex = 37
+        Me.btn_ubahpegawai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btn_hapuspegawai
+        '
+        Me.btn_hapuspegawai.ActiveBorderThickness = 1
+        Me.btn_hapuspegawai.ActiveCornerRadius = 20
+        Me.btn_hapuspegawai.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuspegawai.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_hapuspegawai.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuspegawai.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btn_hapuspegawai.BackgroundImage = CType(resources.GetObject("btn_hapuspegawai.BackgroundImage"), System.Drawing.Image)
+        Me.btn_hapuspegawai.ButtonText = "Hapus"
+        Me.btn_hapuspegawai.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_hapuspegawai.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_hapuspegawai.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuspegawai.IdleBorderThickness = 1
+        Me.btn_hapuspegawai.IdleCornerRadius = 20
+        Me.btn_hapuspegawai.IdleFillColor = System.Drawing.Color.White
+        Me.btn_hapuspegawai.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuspegawai.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_hapuspegawai.Location = New System.Drawing.Point(423, 365)
+        Me.btn_hapuspegawai.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_hapuspegawai.Name = "btn_hapuspegawai"
+        Me.btn_hapuspegawai.Size = New System.Drawing.Size(91, 41)
+        Me.btn_hapuspegawai.TabIndex = 36
+        Me.btn_hapuspegawai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RB_Ppeg
         '
@@ -1853,21 +2120,21 @@ Partial Class Dashboard
         '
         Me.BunifuThinButton24.ActiveBorderThickness = 1
         Me.BunifuThinButton24.ActiveCornerRadius = 20
-        Me.BunifuThinButton24.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton24.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton24.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton24.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton24.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton24.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.BunifuThinButton24.BackgroundImage = CType(resources.GetObject("BunifuThinButton24.BackgroundImage"), System.Drawing.Image)
         Me.BunifuThinButton24.ButtonText = "Batal"
         Me.BunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuThinButton24.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton24.IdleBorderThickness = 1
         Me.BunifuThinButton24.IdleCornerRadius = 20
         Me.BunifuThinButton24.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton24.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton24.Location = New System.Drawing.Point(285, 362)
+        Me.BunifuThinButton24.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton24.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton24.Location = New System.Drawing.Point(294, 365)
         Me.BunifuThinButton24.Margin = New System.Windows.Forms.Padding(5)
         Me.BunifuThinButton24.Name = "BunifuThinButton24"
         Me.BunifuThinButton24.Size = New System.Drawing.Size(91, 41)
@@ -1878,21 +2145,21 @@ Partial Class Dashboard
         '
         Me.btnsimpan_pegawai.ActiveBorderThickness = 1
         Me.btnsimpan_pegawai.ActiveCornerRadius = 20
-        Me.btnsimpan_pegawai.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpan_pegawai.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpan_pegawai.ActiveForecolor = System.Drawing.Color.White
-        Me.btnsimpan_pegawai.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpan_pegawai.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpan_pegawai.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.btnsimpan_pegawai.BackgroundImage = CType(resources.GetObject("btnsimpan_pegawai.BackgroundImage"), System.Drawing.Image)
         Me.btnsimpan_pegawai.ButtonText = "Simpan"
         Me.btnsimpan_pegawai.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnsimpan_pegawai.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsimpan_pegawai.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btnsimpan_pegawai.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnsimpan_pegawai.IdleBorderThickness = 1
         Me.btnsimpan_pegawai.IdleCornerRadius = 20
         Me.btnsimpan_pegawai.IdleFillColor = System.Drawing.Color.White
-        Me.btnsimpan_pegawai.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.btnsimpan_pegawai.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.btnsimpan_pegawai.Location = New System.Drawing.Point(165, 362)
+        Me.btnsimpan_pegawai.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnsimpan_pegawai.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnsimpan_pegawai.Location = New System.Drawing.Point(165, 365)
         Me.btnsimpan_pegawai.Margin = New System.Windows.Forms.Padding(5)
         Me.btnsimpan_pegawai.Name = "btnsimpan_pegawai"
         Me.btnsimpan_pegawai.Size = New System.Drawing.Size(91, 41)
@@ -1903,21 +2170,21 @@ Partial Class Dashboard
         '
         Me.BunifuThinButton27.ActiveBorderThickness = 1
         Me.BunifuThinButton27.ActiveCornerRadius = 20
-        Me.BunifuThinButton27.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton27.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton27.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton27.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton27.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton27.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.BunifuThinButton27.BackgroundImage = CType(resources.GetObject("BunifuThinButton27.BackgroundImage"), System.Drawing.Image)
         Me.BunifuThinButton27.ButtonText = "Tambah"
         Me.BunifuThinButton27.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuThinButton27.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton27.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuThinButton27.IdleBorderThickness = 1
         Me.BunifuThinButton27.IdleCornerRadius = 20
         Me.BunifuThinButton27.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton27.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton27.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton27.Location = New System.Drawing.Point(36, 362)
+        Me.BunifuThinButton27.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton27.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton27.Location = New System.Drawing.Point(36, 365)
         Me.BunifuThinButton27.Margin = New System.Windows.Forms.Padding(5)
         Me.BunifuThinButton27.Name = "BunifuThinButton27"
         Me.BunifuThinButton27.Size = New System.Drawing.Size(91, 41)
@@ -2085,10 +2352,10 @@ Partial Class Dashboard
         Me.PanelUtama.BackColor = System.Drawing.Color.SkyBlue
         Me.PanelUtama.Controls.Add(Me.Panelkonsumen)
         Me.PanelUtama.Controls.Add(Me.PanelPegawai)
-        Me.PanelUtama.Controls.Add(Me.PanelReservasi)
         Me.PanelUtama.Controls.Add(Me.PanelKamar)
-        Me.PanelUtama.Controls.Add(Me.PanelPencarian)
         Me.PanelUtama.Controls.Add(Me.PanelLaporan)
+        Me.PanelUtama.Controls.Add(Me.PanelReservasi)
+        Me.PanelUtama.Controls.Add(Me.PanelPencarian)
         Me.PanelUtama.Controls.Add(Me.Menu_Utama)
         Me.PanelUtama.Location = New System.Drawing.Point(0, 63)
         Me.PanelUtama.Name = "PanelUtama"
@@ -2117,12 +2384,15 @@ Partial Class Dashboard
         Me.GroupBox1.ResumeLayout(False)
         Me.PanelKamar.ResumeLayout(False)
         Me.PanelKamar.PerformLayout()
+        CType(Me.DGV_kamar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelPencarian.ResumeLayout(False)
         Me.PanelPencarian.PerformLayout()
         Me.PanelLaporan.ResumeLayout(False)
         Me.PanelLaporan.PerformLayout()
+        Me.TabLaporan.ResumeLayout(False)
         Me.Panelkonsumen.ResumeLayout(False)
         Me.Panelkonsumen.PerformLayout()
+        CType(Me.DGV_konsumen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelPegawai.ResumeLayout(False)
         Me.PanelPegawai.PerformLayout()
         Me.PanelUtama.ResumeLayout(False)
@@ -2271,4 +2541,16 @@ Partial Class Dashboard
     Friend WithEvents MaterialLabel44 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents ColumnHeader19 As ColumnHeader
     Friend WithEvents btn_hapuskonsumen As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents DGV_konsumen As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents BunifuThinButton23 As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents btn_ubahkonsumen As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents btn_hapuspegawai As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents btn_ubahpegawai As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents btn_hapuskamar As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents btn_ubahkamar As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents TabLaporan As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents DGV_kamar As DataGridView
 End Class
