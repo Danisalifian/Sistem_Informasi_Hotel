@@ -30,7 +30,7 @@ CREATE TABLE `kamar` (
 
 /*Data for the table `kamar` */
 
-insert  into `kamar`(`id_kamar`,`tipe_kamar`,`harga`,`fasilitas`) values ('101','Double',350000,'skljdflkldskfklsdjfk'),('303','Single',200000,'zkdasjlkd'),('505','Triple',500000,'asdlkjaldk'),('707','Double',350000,'kjhkjzxc'),('909','Double',300000,'jkhkjhka');
+insert  into `kamar`(`id_kamar`,`tipe_kamar`,`harga`,`fasilitas`) values ('101','Single',200000,'AC,TV,Shower'),('202','Triple',500000,'AC,TV,Shower'),('303','Single',200000,'AC,TV,Shower'),('505','Triple',500000,'AC,TV,Shower'),('707','Double',350000,'AC,TV,Shower'),('909','Double',300000,'AC,TV,Shower');
 
 /*Table structure for table `konsumen` */
 
@@ -50,7 +50,7 @@ CREATE TABLE `konsumen` (
 
 /*Data for the table `konsumen` */
 
-insert  into `konsumen`(`id_konsumen`,`nama`,`j_kelamin`,`tgl_lahir`,`tempat_lahir`,`alamat`,`kota`,`no_telp`) values ('1','roni','Laki-laki','2018-01-15','kjsdfh','kjefh','ksdjfh','2304987'),('10','skjdfh','Laki-laki','2018-01-16','sdfsdf','sdf','sdf','sdf'),('11','ksdhfk','Laki-laki','2018-01-16','sdf','sdf','sdf','sdf'),('3','doni','Laki-laki','2018-01-16','jgjhg','jhgjh','jhgjh','435345');
+insert  into `konsumen`(`id_konsumen`,`nama`,`j_kelamin`,`tgl_lahir`,`tempat_lahir`,`alamat`,`kota`,`no_telp`) values ('K001','Asep Saepulloh','Laki-laki','1993-06-15','Bandung','Jl. Dipatiukur','Bandung','089643552132'),('K002','Iman Nasrul','Laki-laki','1990-11-16','Solo','Jl. Kolonel Masturi','Cimahi','08798767554'),('K003','Nandang','Laki-laki','2004-07-16','Jakarta','Jl. Peta','Bandung','089768565444'),('K004','Nida Amelia','Perempuan','1995-07-14','Bekasi','Jl.Moh Toha','Bandung','081231145234');
 
 /*Table structure for table `pegawai` */
 
@@ -70,7 +70,7 @@ CREATE TABLE `pegawai` (
 
 /*Data for the table `pegawai` */
 
-insert  into `pegawai`(`id_pegawai`,`nama`,`j_kelamin`,`tgl_lahir`,`tempat_lahir`,`alamat`,`no_telp`,`pass`) values ('123','admin','Perempuan','2018-01-15','qwe','qwe','qwe',''),('456','admin','Perempuan','2017-12-29','dfg','dfg','dfg',''),('9279','admin','Perempuan','2018-01-15','dsfjkh','skdjfh','sdjkfh',''),('admin','admin','Laki-laki','2018-01-13','askjdh','kasjd','ksjdfh','admin');
+insert  into `pegawai`(`id_pegawai`,`nama`,`j_kelamin`,`tgl_lahir`,`tempat_lahir`,`alamat`,`no_telp`,`pass`) values ('admin','Fatah','Laki-laki','1989-02-10','Padang','Jl. Cidahu','081325667543','admin'),('P001','Gading','Laki','2000-01-15','Bandung','Jl. Sukajadi','08875444542',''),('P002','Siti','Perempuan','1989-11-30','Jakarta','Jl. Tubagus Ismail','08976554667',''),('P003','Nadia','Perempuan','1989-03-16','Solo','Jl. Wastu Kencana','089765432112','');
 
 /*Table structure for table `pembayaran` */
 
@@ -92,7 +92,7 @@ CREATE TABLE `pembayaran` (
 
 /*Data for the table `pembayaran` */
 
-insert  into `pembayaran`(`id_pembayaran`,`id_reservasi`,`jenis_bayar`,`subtotal`,`bayar_tambahan`,`total`,`bayar`,`kembalian`) values ('P234','R123','Tunai',300000,0,300000,300000,0),('P6757','R7657','Tunai',300000,125000,425000,500000,75000);
+insert  into `pembayaran`(`id_pembayaran`,`id_reservasi`,`jenis_bayar`,`subtotal`,`bayar_tambahan`,`total`,`bayar`,`kembalian`) values ('P001','R123','Tunai',500000,0,500000,500000,0);
 
 /*Table structure for table `reservasi` */
 
@@ -106,7 +106,7 @@ CREATE TABLE `reservasi` (
   `check_out` date NOT NULL,
   `id_kamar` varchar(3) NOT NULL,
   `hari` int(11) NOT NULL,
-  `catatan` text NOT NULL,
+  `tambahan` varchar(20) DEFAULT NULL,
   `id_pegawai` varchar(10) NOT NULL,
   PRIMARY KEY (`id_reservasi`),
   KEY `id_konsumen` (`id_konsumen`),
@@ -119,7 +119,51 @@ CREATE TABLE `reservasi` (
 
 /*Data for the table `reservasi` */
 
-insert  into `reservasi`(`id_reservasi`,`id_konsumen`,`tgl_reservasi`,`check_in`,`check_out`,`id_kamar`,`hari`,`catatan`,`id_pegawai`) values ('R123','3','2018-01-16','2018-01-17','2018-01-18','505',1,'dsfsdfa','admin'),('R343','11','2018-01-16','2018-01-17','2018-01-19','303',2,'sdfsdf','admin'),('R7657','10','2017-12-29','2017-12-30','2017-12-31','909',1,'Extra Bed','admin'),('R9879','1','2017-12-18','2017-12-22','2017-12-25','909',3,'Extra Bed','admin');
+insert  into `reservasi`(`id_reservasi`,`id_konsumen`,`tgl_reservasi`,`check_in`,`check_out`,`id_kamar`,`hari`,`tambahan`,`id_pegawai`) values ('R123','K001','2018-01-02','2018-01-17','2018-01-18','505',1,NULL,'P003'),('R213','K003','2018-01-18','2018-01-20','2018-01-23','707',3,'','P003'),('R343','K004','2018-01-16','2018-01-17','2018-01-19','303',2,NULL,'P001');
+
+/* Trigger structure for table `konsumen` */
+
+DELIMITER $$
+
+/*!50003 DROP TRIGGER*//*!50032 IF EXISTS */ /*!50003 `history_update` */$$
+
+/*!50003 CREATE */ /*!50017 DEFINER = 'root'@'localhost' */ /*!50003 TRIGGER `history_update` BEFORE UPDATE ON `konsumen` FOR EACH ROW 
+	set new.id_konsumen = old.id_konsumen */$$
+
+
+DELIMITER ;
+
+/*Table structure for table `struk` */
+
+DROP TABLE IF EXISTS `struk`;
+
+/*!50001 DROP VIEW IF EXISTS `struk` */;
+/*!50001 DROP TABLE IF EXISTS `struk` */;
+
+/*!50001 CREATE TABLE  `struk`(
+ `id_konsumen` varchar(15) ,
+ `id_reservasi` varchar(10) ,
+ `jenis_bayar` varchar(25) ,
+ `id_kamar` varchar(3) ,
+ `check_in` date ,
+ `check_out` date ,
+ `hari` int(11) ,
+ `subtotal` int(11) ,
+ `bayar_tambahan` int(11) ,
+ `total` int(11) ,
+ `bayar` int(11) ,
+ `kembalian` int(11) ,
+ `nama` varchar(30) ,
+ `no_telp` varchar(12) ,
+ `Tanggal` datetime 
+)*/;
+
+/*View structure for view struk */
+
+/*!50001 DROP TABLE IF EXISTS `struk` */;
+/*!50001 DROP VIEW IF EXISTS `struk` */;
+
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `struk` AS (select `konsumen`.`id_konsumen` AS `id_konsumen`,`reservasi`.`id_reservasi` AS `id_reservasi`,`pembayaran`.`jenis_bayar` AS `jenis_bayar`,`kamar`.`id_kamar` AS `id_kamar`,`reservasi`.`check_in` AS `check_in`,`reservasi`.`check_out` AS `check_out`,`reservasi`.`hari` AS `hari`,`pembayaran`.`subtotal` AS `subtotal`,`pembayaran`.`bayar_tambahan` AS `bayar_tambahan`,`pembayaran`.`total` AS `total`,`pembayaran`.`bayar` AS `bayar`,`pembayaran`.`kembalian` AS `kembalian`,`pegawai`.`nama` AS `nama`,`pegawai`.`no_telp` AS `no_telp`,now() AS `Tanggal` from ((((`kamar` join `pembayaran`) join `konsumen`) join `pegawai`) join `reservasi`) where ((`kamar`.`id_kamar` = `reservasi`.`id_kamar`) and (`konsumen`.`id_konsumen` = `reservasi`.`id_konsumen`) and (`pegawai`.`id_pegawai` = `reservasi`.`id_pegawai`) and (`pembayaran`.`id_reservasi` = `reservasi`.`id_reservasi`))) */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
