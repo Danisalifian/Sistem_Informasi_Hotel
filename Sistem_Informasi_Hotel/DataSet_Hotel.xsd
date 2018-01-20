@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Hotel" targetNamespace="http://tempuri.org/DataSet_Hotel.xsd" xmlns:mstns="http://tempuri.org/DataSet_Hotel.xsd" xmlns="http://tempuri.org/DataSet_Hotel.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Hotel" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Hotel" msprop:Generator_UserDSName="DataSet_Hotel">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="konsumen" msprop:Generator_TableClassName="konsumenDataTable" msprop:Generator_TableVarName="tablekonsumen" msprop:Generator_TablePropName="konsumen" msprop:Generator_RowDeletingName="konsumenRowDeleting" msprop:Generator_RowChangingName="konsumenRowChanging" msprop:Generator_RowEvHandlerName="konsumenRowChangeEventHandler" msprop:Generator_RowDeletedName="konsumenRowDeleted" msprop:Generator_UserTableName="konsumen" msprop:Generator_RowChangedName="konsumenRowChanged" msprop:Generator_RowEvArgName="konsumenRowChangeEvent" msprop:Generator_RowClassName="konsumenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_konsumen" msprop:Generator_ColumnVarNameInTable="columnid_konsumen" msprop:Generator_ColumnPropNameInRow="id_konsumen" msprop:Generator_ColumnPropNameInTable="id_konsumenColumn" msprop:Generator_UserColumnName="id_konsumen" type="xs:string" minOccurs="0" />
+              <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama" type="xs:string" minOccurs="0" />
+              <xs:element name="j_kelamin" msprop:Generator_ColumnVarNameInTable="columnj_kelamin" msprop:Generator_ColumnPropNameInRow="j_kelamin" msprop:Generator_ColumnPropNameInTable="j_kelaminColumn" msprop:Generator_UserColumnName="j_kelamin" type="xs:string" minOccurs="0" />
+              <xs:element name="tgl_lahir" msprop:Generator_ColumnVarNameInTable="columntgl_lahir" msprop:Generator_ColumnPropNameInRow="tgl_lahir" msprop:Generator_ColumnPropNameInTable="tgl_lahirColumn" msprop:Generator_UserColumnName="tgl_lahir" type="xs:string" minOccurs="0" />
+              <xs:element name="tempat_lahir" msprop:Generator_ColumnVarNameInTable="columntempat_lahir" msprop:Generator_ColumnPropNameInRow="tempat_lahir" msprop:Generator_ColumnPropNameInTable="tempat_lahirColumn" msprop:Generator_UserColumnName="tempat_lahir" type="xs:string" minOccurs="0" />
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat" type="xs:string" minOccurs="0" />
+              <xs:element name="kota" msprop:Generator_ColumnVarNameInTable="columnkota" msprop:Generator_ColumnPropNameInRow="kota" msprop:Generator_ColumnPropNameInTable="kotaColumn" msprop:Generator_UserColumnName="kota" type="xs:string" minOccurs="0" />
+              <xs:element name="no_telp" msprop:Generator_ColumnVarNameInTable="columnno_telp" msprop:Generator_ColumnPropNameInRow="no_telp" msprop:Generator_ColumnPropNameInTable="no_telpColumn" msprop:Generator_UserColumnName="no_telp" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reservasi" msprop:Generator_TableClassName="reservasiDataTable" msprop:Generator_TableVarName="tablereservasi" msprop:Generator_TablePropName="reservasi" msprop:Generator_RowDeletingName="reservasiRowDeleting" msprop:Generator_RowChangingName="reservasiRowChanging" msprop:Generator_RowEvHandlerName="reservasiRowChangeEventHandler" msprop:Generator_RowDeletedName="reservasiRowDeleted" msprop:Generator_UserTableName="reservasi" msprop:Generator_RowChangedName="reservasiRowChanged" msprop:Generator_RowEvArgName="reservasiRowChangeEvent" msprop:Generator_RowClassName="reservasiRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_reservasi" msprop:Generator_ColumnVarNameInTable="columnid_reservasi" msprop:Generator_ColumnPropNameInRow="id_reservasi" msprop:Generator_ColumnPropNameInTable="id_reservasiColumn" msprop:Generator_UserColumnName="id_reservasi" type="xs:string" minOccurs="0" />
+              <xs:element name="id_konsumen" msprop:Generator_ColumnVarNameInTable="columnid_konsumen" msprop:Generator_ColumnPropNameInRow="id_konsumen" msprop:Generator_ColumnPropNameInTable="id_konsumenColumn" msprop:Generator_UserColumnName="id_konsumen" type="xs:string" minOccurs="0" />
+              <xs:element name="tgl_reservasi" msprop:Generator_ColumnVarNameInTable="columntgl_reservasi" msprop:Generator_ColumnPropNameInRow="tgl_reservasi" msprop:Generator_ColumnPropNameInTable="tgl_reservasiColumn" msprop:Generator_UserColumnName="tgl_reservasi" type="xs:string" minOccurs="0" />
+              <xs:element name="check_in" msprop:Generator_ColumnVarNameInTable="columncheck_in" msprop:Generator_ColumnPropNameInRow="check_in" msprop:Generator_ColumnPropNameInTable="check_inColumn" msprop:Generator_UserColumnName="check_in" type="xs:string" minOccurs="0" />
+              <xs:element name="check_out" msprop:Generator_ColumnVarNameInTable="columncheck_out" msprop:Generator_ColumnPropNameInRow="check_out" msprop:Generator_ColumnPropNameInTable="check_outColumn" msprop:Generator_UserColumnName="check_out" type="xs:string" minOccurs="0" />
+              <xs:element name="id_kamar" msprop:Generator_ColumnVarNameInTable="columnid_kamar" msprop:Generator_ColumnPropNameInRow="id_kamar" msprop:Generator_ColumnPropNameInTable="id_kamarColumn" msprop:Generator_UserColumnName="id_kamar" type="xs:string" minOccurs="0" />
+              <xs:element name="hari" msprop:Generator_ColumnVarNameInTable="columnhari" msprop:Generator_ColumnPropNameInRow="hari" msprop:Generator_ColumnPropNameInTable="hariColumn" msprop:Generator_UserColumnName="hari" type="xs:string" minOccurs="0" />
+              <xs:element name="tambahan" msprop:Generator_ColumnVarNameInTable="columntambahan" msprop:Generator_ColumnPropNameInRow="tambahan" msprop:Generator_ColumnPropNameInTable="tambahanColumn" msprop:Generator_UserColumnName="tambahan" type="xs:string" minOccurs="0" />
+              <xs:element name="id_pegawai" msprop:Generator_ColumnVarNameInTable="columnid_pegawai" msprop:Generator_ColumnPropNameInRow="id_pegawai" msprop:Generator_ColumnPropNameInTable="id_pegawaiColumn" msprop:Generator_UserColumnName="id_pegawai" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pembayaran" msprop:Generator_TableClassName="pembayaranDataTable" msprop:Generator_TableVarName="tablepembayaran" msprop:Generator_TablePropName="pembayaran" msprop:Generator_RowDeletingName="pembayaranRowDeleting" msprop:Generator_RowChangingName="pembayaranRowChanging" msprop:Generator_RowEvHandlerName="pembayaranRowChangeEventHandler" msprop:Generator_RowDeletedName="pembayaranRowDeleted" msprop:Generator_UserTableName="pembayaran" msprop:Generator_RowChangedName="pembayaranRowChanged" msprop:Generator_RowEvArgName="pembayaranRowChangeEvent" msprop:Generator_RowClassName="pembayaranRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_pembayaran" msprop:Generator_ColumnVarNameInTable="columnid_pembayaran" msprop:Generator_ColumnPropNameInRow="id_pembayaran" msprop:Generator_ColumnPropNameInTable="id_pembayaranColumn" msprop:Generator_UserColumnName="id_pembayaran" type="xs:string" minOccurs="0" />
+              <xs:element name="id_reservasi" msprop:Generator_ColumnVarNameInTable="columnid_reservasi" msprop:Generator_ColumnPropNameInRow="id_reservasi" msprop:Generator_ColumnPropNameInTable="id_reservasiColumn" msprop:Generator_UserColumnName="id_reservasi" type="xs:string" minOccurs="0" />
+              <xs:element name="jenis_bayar" msprop:Generator_ColumnVarNameInTable="columnjenis_bayar" msprop:Generator_ColumnPropNameInRow="jenis_bayar" msprop:Generator_ColumnPropNameInTable="jenis_bayarColumn" msprop:Generator_UserColumnName="jenis_bayar" type="xs:string" minOccurs="0" />
+              <xs:element name="subtotal" msprop:Generator_ColumnVarNameInTable="columnsubtotal" msprop:Generator_ColumnPropNameInRow="subtotal" msprop:Generator_ColumnPropNameInTable="subtotalColumn" msprop:Generator_UserColumnName="subtotal" type="xs:string" minOccurs="0" />
+              <xs:element name="bayar_tambahan" msprop:Generator_ColumnVarNameInTable="columnbayar_tambahan" msprop:Generator_ColumnPropNameInRow="bayar_tambahan" msprop:Generator_ColumnPropNameInTable="bayar_tambahanColumn" msprop:Generator_UserColumnName="bayar_tambahan" type="xs:string" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:string" minOccurs="0" />
+              <xs:element name="bayar" msprop:Generator_ColumnVarNameInTable="columnbayar" msprop:Generator_ColumnPropNameInRow="bayar" msprop:Generator_ColumnPropNameInTable="bayarColumn" msprop:Generator_UserColumnName="bayar" type="xs:string" minOccurs="0" />
+              <xs:element name="kembalian" msprop:Generator_ColumnVarNameInTable="columnkembalian" msprop:Generator_ColumnPropNameInRow="kembalian" msprop:Generator_ColumnPropNameInTable="kembalianColumn" msprop:Generator_UserColumnName="kembalian" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

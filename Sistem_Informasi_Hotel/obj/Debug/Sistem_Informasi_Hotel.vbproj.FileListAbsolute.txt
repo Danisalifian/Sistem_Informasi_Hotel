@@ -13,4 +13,10 @@ E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem
 E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.Login.resources
 E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.Dashboard.resources
 E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\MaterialSkin.dll
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.rpt_konsumen.resources
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\RdlCompile.cache
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\RdlCompile.compiled
 E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.vbprojResolveAssemblyReference.cache
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.rpt_reservasi.resources
+E:\Kuliah\Semester_V\Sistem_Basis_Data\Tugas_Besar\Sistem_Informasi_Hotel\Sistem_Informasi_Hotel\obj\Debug\Sistem_Informasi_Hotel.rpt_pembayaran.resources

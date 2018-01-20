@@ -32,5 +32,55 @@ Sistem_Informasi_Hotel
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel.konsumenDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel.reservasiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel.pembayaranDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel.konsumenRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel.reservasiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel.pembayaranRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel.konsumenRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel.reservasiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistem_Informasi_Hotel.DataSet_Hotel.pembayaranRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 </members>
 </doc>

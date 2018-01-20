@@ -24,6 +24,12 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
+        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -36,9 +42,13 @@ Partial Class Dashboard
         Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle61 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle62 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle63 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Menu_Utama = New Bunifu.Framework.UI.BunifuCards()
-        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.strid = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.strnama = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.Panelbtn = New System.Windows.Forms.Panel()
         Me.btnpegawai = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnkonsumen = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -49,6 +59,14 @@ Partial Class Dashboard
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.struserid = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.PanelReservasi = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Date_akhir = New Bunifu.Framework.UI.BunifuDatepicker()
+        Me.Date_mulai = New Bunifu.Framework.UI.BunifuDatepicker()
+        Me.BunifuThinButton21 = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.DGV_kamarkosong = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btn_batalpembayaran = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -116,8 +134,8 @@ Partial Class Dashboard
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.MaterialLabel47 = New MaterialSkin.Controls.MaterialLabel()
         Me.btn_backup = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.btn_restore = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btn_connect = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.MaterialLabel21 = New MaterialSkin.Controls.MaterialLabel()
@@ -129,6 +147,8 @@ Partial Class Dashboard
         Me.MaterialLabel20 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.PanelLaporan = New System.Windows.Forms.Panel()
+        Me.btn_rptpembayaran = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.btn_rptreservasi = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.TabLaporan = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -137,6 +157,11 @@ Partial Class Dashboard
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DGV_reservasi = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btn_caripembayaran = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.DGV_pembayaran = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         Me.Panelkonsumen = New System.Windows.Forms.Panel()
@@ -145,7 +170,6 @@ Partial Class Dashboard
         Me.btn_batalkonsumen = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_simpankonsumen = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_tambahkonsumen = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuThinButton23 = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.Panel_carikonsumen = New System.Windows.Forms.Panel()
         Me.btn_resetkonsumen = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.btn_carikonsumen = New Bunifu.Framework.UI.BunifuThinButton2()
@@ -205,13 +229,22 @@ Partial Class Dashboard
         Me.ColumnHeader22 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader23 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.btn_rptkonsumen = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.btn_carikonsumen1 = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.DGV_konsumen1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.Menu_Utama.SuspendLayout()
         Me.Panelbtn.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReservasi.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.DGV_kamarkosong, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.PanelKamar.SuspendLayout()
@@ -225,6 +258,10 @@ Partial Class Dashboard
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DGV_reservasi, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.DGV_pembayaran, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
         Me.Panelkonsumen.SuspendLayout()
         Me.Panel_carikonsumen.SuspendLayout()
         CType(Me.DGV_konsumen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -232,6 +269,9 @@ Partial Class Dashboard
         Me.Panel_caripegawai.SuspendLayout()
         CType(Me.DGV_pegawai, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelUtama.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        CType(Me.DGV_konsumen1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Menu_Utama
@@ -240,8 +280,9 @@ Partial Class Dashboard
         Me.Menu_Utama.BorderRadius = 0
         Me.Menu_Utama.BottomSahddow = False
         Me.Menu_Utama.color = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.Menu_Utama.Controls.Add(Me.BunifuFlatButton2)
         Me.Menu_Utama.Controls.Add(Me.strid)
+        Me.Menu_Utama.Controls.Add(Me.BunifuFlatButton2)
+        Me.Menu_Utama.Controls.Add(Me.strnama)
         Me.Menu_Utama.Controls.Add(Me.Panelbtn)
         Me.Menu_Utama.Controls.Add(Me.PictureBox1)
         Me.Menu_Utama.Controls.Add(Me.struserid)
@@ -253,6 +294,18 @@ Partial Class Dashboard
         Me.Menu_Utama.ShadowDepth = 20
         Me.Menu_Utama.Size = New System.Drawing.Size(225, 637)
         Me.Menu_Utama.TabIndex = 1
+        '
+        'strid
+        '
+        Me.strid.AutoSize = True
+        Me.strid.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.strid.ForeColor = System.Drawing.Color.White
+        Me.strid.Location = New System.Drawing.Point(69, 36)
+        Me.strid.Name = "strid"
+        Me.strid.Size = New System.Drawing.Size(60, 21)
+        Me.strid.TabIndex = 9
+        Me.strid.Text = "id peg"
+        Me.strid.Visible = False
         '
         'BunifuFlatButton2
         '
@@ -289,16 +342,16 @@ Partial Class Dashboard
         Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'strid
+        'strnama
         '
-        Me.strid.AutoSize = True
-        Me.strid.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.strid.ForeColor = System.Drawing.Color.White
-        Me.strid.Location = New System.Drawing.Point(69, 9)
-        Me.strid.Name = "strid"
-        Me.strid.Size = New System.Drawing.Size(24, 21)
-        Me.strid.TabIndex = 8
-        Me.strid.Text = "id"
+        Me.strnama.AutoSize = True
+        Me.strnama.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.strnama.ForeColor = System.Drawing.Color.White
+        Me.strnama.Location = New System.Drawing.Point(69, 9)
+        Me.strnama.Name = "strnama"
+        Me.strnama.Size = New System.Drawing.Size(57, 21)
+        Me.strnama.TabIndex = 8
+        Me.strnama.Text = "nama"
         '
         'Panelbtn
         '
@@ -536,13 +589,15 @@ Partial Class Dashboard
         Me.struserid.ForeColor = System.Drawing.Color.White
         Me.struserid.Location = New System.Drawing.Point(3, 9)
         Me.struserid.Name = "struserid"
-        Me.struserid.Size = New System.Drawing.Size(75, 21)
+        Me.struserid.Size = New System.Drawing.Size(67, 21)
         Me.struserid.TabIndex = 7
-        Me.struserid.Text = "ID User : "
+        Me.struserid.Text = "Nama :"
         '
         'PanelReservasi
         '
         Me.PanelReservasi.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.PanelReservasi.Controls.Add(Me.Panel4)
+        Me.PanelReservasi.Controls.Add(Me.DGV_kamarkosong)
         Me.PanelReservasi.Controls.Add(Me.MaterialLabel1)
         Me.PanelReservasi.Controls.Add(Me.GroupBox2)
         Me.PanelReservasi.Controls.Add(Me.MaterialLabel12)
@@ -566,6 +621,155 @@ Partial Class Dashboard
         Me.PanelReservasi.Name = "PanelReservasi"
         Me.PanelReservasi.Size = New System.Drawing.Size(1055, 637)
         Me.PanelReservasi.TabIndex = 10
+        '
+        'Panel4
+        '
+        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Label8)
+        Me.Panel4.Controls.Add(Me.Label7)
+        Me.Panel4.Controls.Add(Me.Date_akhir)
+        Me.Panel4.Controls.Add(Me.Date_mulai)
+        Me.Panel4.Controls.Add(Me.BunifuThinButton21)
+        Me.Panel4.Controls.Add(Me.Label6)
+        Me.Panel4.Location = New System.Drawing.Point(27, 446)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1000, 40)
+        Me.Panel4.TabIndex = 41
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(527, 12)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(144, 20)
+        Me.Label8.TabIndex = 44
+        Me.Label8.Text = "Tanggal Check Out"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(163, 12)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(132, 20)
+        Me.Label7.TabIndex = 43
+        Me.Label7.Text = "Tanggal Check In"
+        '
+        'Date_akhir
+        '
+        Me.Date_akhir.BackColor = System.Drawing.Color.SeaGreen
+        Me.Date_akhir.BorderRadius = 0
+        Me.Date_akhir.ForeColor = System.Drawing.Color.White
+        Me.Date_akhir.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.Date_akhir.FormatCustom = Nothing
+        Me.Date_akhir.Location = New System.Drawing.Point(681, 3)
+        Me.Date_akhir.Name = "Date_akhir"
+        Me.Date_akhir.Size = New System.Drawing.Size(210, 36)
+        Me.Date_akhir.TabIndex = 42
+        Me.Date_akhir.Value = New Date(2018, 1, 19, 22, 37, 9, 245)
+        '
+        'Date_mulai
+        '
+        Me.Date_mulai.BackColor = System.Drawing.Color.SeaGreen
+        Me.Date_mulai.BorderRadius = 0
+        Me.Date_mulai.ForeColor = System.Drawing.Color.White
+        Me.Date_mulai.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.Date_mulai.FormatCustom = Nothing
+        Me.Date_mulai.Location = New System.Drawing.Point(302, 3)
+        Me.Date_mulai.Name = "Date_mulai"
+        Me.Date_mulai.Size = New System.Drawing.Size(210, 36)
+        Me.Date_mulai.TabIndex = 41
+        Me.Date_mulai.Value = New Date(2018, 1, 19, 22, 37, 9, 245)
+        '
+        'BunifuThinButton21
+        '
+        Me.BunifuThinButton21.ActiveBorderThickness = 1
+        Me.BunifuThinButton21.ActiveCornerRadius = 20
+        Me.BunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton21.ActiveForecolor = System.Drawing.Color.White
+        Me.BunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.BunifuThinButton21.BackgroundImage = CType(resources.GetObject("BunifuThinButton21.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuThinButton21.ButtonText = "Cari"
+        Me.BunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuThinButton21.Font = New System.Drawing.Font("Century Gothic", 11.0!)
+        Me.BunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton21.IdleBorderThickness = 1
+        Me.BunifuThinButton21.IdleCornerRadius = 20
+        Me.BunifuThinButton21.IdleFillColor = System.Drawing.Color.White
+        Me.BunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuThinButton21.Location = New System.Drawing.Point(918, 1)
+        Me.BunifuThinButton21.Margin = New System.Windows.Forms.Padding(5)
+        Me.BunifuThinButton21.Name = "BunifuThinButton21"
+        Me.BunifuThinButton21.Size = New System.Drawing.Size(64, 37)
+        Me.BunifuThinButton21.TabIndex = 40
+        Me.BunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(2, 12)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(146, 20)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Cari Kamar Kosong"
+        '
+        'DGV_kamarkosong
+        '
+        Me.DGV_kamarkosong.AllowUserToAddRows = False
+        Me.DGV_kamarkosong.AllowUserToDeleteRows = False
+        Me.DGV_kamarkosong.AllowUserToResizeRows = False
+        DataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DGV_kamarkosong.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle43
+        Me.DGV_kamarkosong.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DGV_kamarkosong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_kamarkosong.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGV_kamarkosong.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGV_kamarkosong.CausesValidation = False
+        Me.DGV_kamarkosong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle44.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_kamarkosong.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle44
+        Me.DGV_kamarkosong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle45.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.DeepSkyBlue
+        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_kamarkosong.DefaultCellStyle = DataGridViewCellStyle45
+        Me.DGV_kamarkosong.DoubleBuffered = True
+        Me.DGV_kamarkosong.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.DGV_kamarkosong.EnableHeadersVisualStyles = False
+        Me.DGV_kamarkosong.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.DGV_kamarkosong.HeaderForeColor = System.Drawing.Color.White
+        Me.DGV_kamarkosong.Location = New System.Drawing.Point(27, 486)
+        Me.DGV_kamarkosong.Name = "DGV_kamarkosong"
+        Me.DGV_kamarkosong.ReadOnly = True
+        Me.DGV_kamarkosong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGV_kamarkosong.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.DGV_kamarkosong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_kamarkosong.Size = New System.Drawing.Size(1000, 131)
+        Me.DGV_kamarkosong.TabIndex = 40
         '
         'MaterialLabel1
         '
@@ -1508,8 +1712,8 @@ Partial Class Dashboard
         Me.DGV_kamar.AllowUserToAddRows = False
         Me.DGV_kamar.AllowUserToDeleteRows = False
         Me.DGV_kamar.AllowUserToResizeRows = False
-        DataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DGV_kamar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle49
+        DataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DGV_kamar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle46
         Me.DGV_kamar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1518,23 +1722,23 @@ Partial Class Dashboard
         Me.DGV_kamar.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGV_kamar.CausesValidation = False
         Me.DGV_kamar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle50.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle50.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle50.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_kamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle47.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle47.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_kamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle47
         Me.DGV_kamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle51.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.DeepSkyBlue
-        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_kamar.DefaultCellStyle = DataGridViewCellStyle51
+        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.DeepSkyBlue
+        DataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_kamar.DefaultCellStyle = DataGridViewCellStyle48
         Me.DGV_kamar.DoubleBuffered = True
         Me.DGV_kamar.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DGV_kamar.EnableHeadersVisualStyles = False
@@ -1664,11 +1868,12 @@ Partial Class Dashboard
         '
         Me.GroupBox4.Controls.Add(Me.MaterialLabel47)
         Me.GroupBox4.Controls.Add(Me.btn_backup)
-        Me.GroupBox4.Controls.Add(Me.ComboBox1)
         Me.GroupBox4.Controls.Add(Me.btn_restore)
-        Me.GroupBox4.Location = New System.Drawing.Point(488, 70)
+        Me.GroupBox4.Controls.Add(Me.ComboBox1)
+        Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox4.Location = New System.Drawing.Point(488, 67)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(511, 208)
+        Me.GroupBox4.Size = New System.Drawing.Size(452, 215)
         Me.GroupBox4.TabIndex = 13
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Informasi Database"
@@ -1679,7 +1884,7 @@ Partial Class Dashboard
         Me.MaterialLabel47.Depth = 0
         Me.MaterialLabel47.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel47.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel47.Location = New System.Drawing.Point(11, 27)
+        Me.MaterialLabel47.Location = New System.Drawing.Point(18, 28)
         Me.MaterialLabel47.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel47.Name = "MaterialLabel47"
         Me.MaterialLabel47.Size = New System.Drawing.Size(72, 19)
@@ -1707,7 +1912,8 @@ Partial Class Dashboard
         Me.btn_backup.IconVisible = True
         Me.btn_backup.IconZoom = 90.0R
         Me.btn_backup.IsTab = False
-        Me.btn_backup.Location = New System.Drawing.Point(243, 65)
+        Me.btn_backup.Location = New System.Drawing.Point(183, 67)
+        Me.btn_backup.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_backup.Name = "btn_backup"
         Me.btn_backup.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_backup.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(244, Byte), Integer))
@@ -1719,15 +1925,6 @@ Partial Class Dashboard
         Me.btn_backup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_backup.Textcolor = System.Drawing.Color.White
         Me.btn_backup.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(243, 25)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(233, 26)
-        Me.ComboBox1.TabIndex = 9
         '
         'btn_restore
         '
@@ -1750,7 +1947,8 @@ Partial Class Dashboard
         Me.btn_restore.IconVisible = True
         Me.btn_restore.IconZoom = 90.0R
         Me.btn_restore.IsTab = False
-        Me.btn_restore.Location = New System.Drawing.Point(243, 127)
+        Me.btn_restore.Location = New System.Drawing.Point(183, 129)
+        Me.btn_restore.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_restore.Name = "btn_restore"
         Me.btn_restore.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_restore.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(244, Byte), Integer))
@@ -1763,6 +1961,15 @@ Partial Class Dashboard
         Me.btn_restore.Textcolor = System.Drawing.Color.White
         Me.btn_restore.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(183, 23)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(233, 26)
+        Me.ComboBox1.TabIndex = 9
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.btn_connect)
@@ -1772,6 +1979,7 @@ Partial Class Dashboard
         Me.GroupBox3.Controls.Add(Me.TextBox13)
         Me.GroupBox3.Controls.Add(Me.TextBox14)
         Me.GroupBox3.Controls.Add(Me.MaterialLabel46)
+        Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(21, 67)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(434, 214)
@@ -1801,6 +2009,7 @@ Partial Class Dashboard
         Me.btn_connect.IconZoom = 90.0R
         Me.btn_connect.IsTab = False
         Me.btn_connect.Location = New System.Drawing.Point(177, 130)
+        Me.btn_connect.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_connect.Name = "btn_connect"
         Me.btn_connect.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_connect.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(244, Byte), Integer))
@@ -1906,6 +2115,9 @@ Partial Class Dashboard
         'PanelLaporan
         '
         Me.PanelLaporan.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.PanelLaporan.Controls.Add(Me.btn_rptkonsumen)
+        Me.PanelLaporan.Controls.Add(Me.btn_rptpembayaran)
+        Me.PanelLaporan.Controls.Add(Me.btn_rptreservasi)
         Me.PanelLaporan.Controls.Add(Me.TabLaporan)
         Me.PanelLaporan.Controls.Add(Me.MaterialLabel4)
         Me.PanelLaporan.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1913,6 +2125,32 @@ Partial Class Dashboard
         Me.PanelLaporan.Name = "PanelLaporan"
         Me.PanelLaporan.Size = New System.Drawing.Size(1055, 637)
         Me.PanelLaporan.TabIndex = 1
+        '
+        'btn_rptpembayaran
+        '
+        Me.btn_rptpembayaran.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_rptpembayaran.Depth = 0
+        Me.btn_rptpembayaran.Location = New System.Drawing.Point(659, 450)
+        Me.btn_rptpembayaran.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_rptpembayaran.Name = "btn_rptpembayaran"
+        Me.btn_rptpembayaran.Primary = True
+        Me.btn_rptpembayaran.Size = New System.Drawing.Size(189, 38)
+        Me.btn_rptpembayaran.TabIndex = 46
+        Me.btn_rptpembayaran.Text = "Laporan Pembayaran"
+        Me.btn_rptpembayaran.UseVisualStyleBackColor = True
+        '
+        'btn_rptreservasi
+        '
+        Me.btn_rptreservasi.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_rptreservasi.Depth = 0
+        Me.btn_rptreservasi.Location = New System.Drawing.Point(464, 449)
+        Me.btn_rptreservasi.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_rptreservasi.Name = "btn_rptreservasi"
+        Me.btn_rptreservasi.Primary = True
+        Me.btn_rptreservasi.Size = New System.Drawing.Size(189, 38)
+        Me.btn_rptreservasi.TabIndex = 45
+        Me.btn_rptreservasi.Text = "Laporan Reservasi"
+        Me.btn_rptreservasi.UseVisualStyleBackColor = True
         '
         'TabLaporan
         '
@@ -1948,7 +2186,7 @@ Partial Class Dashboard
         Me.Panel2.Controls.Add(Me.btn_carireservasi)
         Me.Panel2.Controls.Add(Me.TextBox24)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Location = New System.Drawing.Point(3, 1)
+        Me.Panel2.Location = New System.Drawing.Point(0, 1)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1011, 40)
         Me.Panel2.TabIndex = 39
@@ -2003,8 +2241,8 @@ Partial Class Dashboard
         Me.DGV_reservasi.AllowUserToAddRows = False
         Me.DGV_reservasi.AllowUserToDeleteRows = False
         Me.DGV_reservasi.AllowUserToResizeRows = False
-        DataGridViewCellStyle52.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DGV_reservasi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle52
+        DataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DGV_reservasi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle49
         Me.DGV_reservasi.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -2013,29 +2251,29 @@ Partial Class Dashboard
         Me.DGV_reservasi.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGV_reservasi.CausesValidation = False
         Me.DGV_reservasi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle53.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle53.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_reservasi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle50.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle50.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle50.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_reservasi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle50
         Me.DGV_reservasi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle54.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.DeepSkyBlue
-        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_reservasi.DefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle51.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.DeepSkyBlue
+        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_reservasi.DefaultCellStyle = DataGridViewCellStyle51
         Me.DGV_reservasi.DoubleBuffered = True
         Me.DGV_reservasi.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DGV_reservasi.EnableHeadersVisualStyles = False
         Me.DGV_reservasi.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
         Me.DGV_reservasi.HeaderForeColor = System.Drawing.Color.White
-        Me.DGV_reservasi.Location = New System.Drawing.Point(3, 41)
+        Me.DGV_reservasi.Location = New System.Drawing.Point(0, 41)
         Me.DGV_reservasi.Name = "DGV_reservasi"
         Me.DGV_reservasi.ReadOnly = True
         Me.DGV_reservasi.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -2046,6 +2284,8 @@ Partial Class Dashboard
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Panel5)
+        Me.TabPage2.Controls.Add(Me.DGV_pembayaran)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -2054,14 +2294,120 @@ Partial Class Dashboard
         Me.TabPage2.Text = "Data Pembayaran"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Panel5
+        '
+        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.btn_caripembayaran)
+        Me.Panel5.Controls.Add(Me.TextBox33)
+        Me.Panel5.Controls.Add(Me.Label10)
+        Me.Panel5.Location = New System.Drawing.Point(0, 1)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1011, 40)
+        Me.Panel5.TabIndex = 48
+        '
+        'btn_caripembayaran
+        '
+        Me.btn_caripembayaran.ActiveBorderThickness = 1
+        Me.btn_caripembayaran.ActiveCornerRadius = 20
+        Me.btn_caripembayaran.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_caripembayaran.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_caripembayaran.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_caripembayaran.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.btn_caripembayaran.BackgroundImage = CType(resources.GetObject("btn_caripembayaran.BackgroundImage"), System.Drawing.Image)
+        Me.btn_caripembayaran.ButtonText = "Cari"
+        Me.btn_caripembayaran.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_caripembayaran.Font = New System.Drawing.Font("Century Gothic", 11.0!)
+        Me.btn_caripembayaran.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_caripembayaran.IdleBorderThickness = 1
+        Me.btn_caripembayaran.IdleCornerRadius = 20
+        Me.btn_caripembayaran.IdleFillColor = System.Drawing.Color.White
+        Me.btn_caripembayaran.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_caripembayaran.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_caripembayaran.Location = New System.Drawing.Point(352, 3)
+        Me.btn_caripembayaran.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_caripembayaran.Name = "btn_caripembayaran"
+        Me.btn_caripembayaran.Size = New System.Drawing.Size(64, 37)
+        Me.btn_caripembayaran.TabIndex = 41
+        Me.btn_caripembayaran.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TextBox33
+        '
+        Me.TextBox33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox33.Location = New System.Drawing.Point(158, 12)
+        Me.TextBox33.Name = "TextBox33"
+        Me.TextBox33.Size = New System.Drawing.Size(186, 22)
+        Me.TextBox33.TabIndex = 38
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(2, 12)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(130, 20)
+        Me.Label10.TabIndex = 5
+        Me.Label10.Text = "Cari Berdasarkan"
+        '
+        'DGV_pembayaran
+        '
+        Me.DGV_pembayaran.AllowUserToAddRows = False
+        Me.DGV_pembayaran.AllowUserToDeleteRows = False
+        Me.DGV_pembayaran.AllowUserToResizeRows = False
+        DataGridViewCellStyle52.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DGV_pembayaran.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle52
+        Me.DGV_pembayaran.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DGV_pembayaran.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_pembayaran.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGV_pembayaran.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGV_pembayaran.CausesValidation = False
+        Me.DGV_pembayaran.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle53.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle53.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_pembayaran.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle53
+        Me.DGV_pembayaran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle54.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.DeepSkyBlue
+        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_pembayaran.DefaultCellStyle = DataGridViewCellStyle54
+        Me.DGV_pembayaran.DoubleBuffered = True
+        Me.DGV_pembayaran.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.DGV_pembayaran.EnableHeadersVisualStyles = False
+        Me.DGV_pembayaran.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.DGV_pembayaran.HeaderForeColor = System.Drawing.Color.White
+        Me.DGV_pembayaran.Location = New System.Drawing.Point(0, 41)
+        Me.DGV_pembayaran.Name = "DGV_pembayaran"
+        Me.DGV_pembayaran.ReadOnly = True
+        Me.DGV_pembayaran.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGV_pembayaran.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.DGV_pembayaran.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_pembayaran.Size = New System.Drawing.Size(1011, 293)
+        Me.DGV_pembayaran.TabIndex = 47
+        '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Panel6)
+        Me.TabPage3.Controls.Add(Me.DGV_konsumen1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(1014, 337)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.Text = "Data Konsumen"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'MaterialLabel4
@@ -2085,7 +2431,6 @@ Partial Class Dashboard
         Me.Panelkonsumen.Controls.Add(Me.btn_batalkonsumen)
         Me.Panelkonsumen.Controls.Add(Me.btn_simpankonsumen)
         Me.Panelkonsumen.Controls.Add(Me.btn_tambahkonsumen)
-        Me.Panelkonsumen.Controls.Add(Me.BunifuThinButton23)
         Me.Panelkonsumen.Controls.Add(Me.Panel_carikonsumen)
         Me.Panelkonsumen.Controls.Add(Me.DGV_konsumen)
         Me.Panelkonsumen.Controls.Add(Me.RB_Pkons)
@@ -2291,31 +2636,6 @@ Partial Class Dashboard
         Me.btn_tambahkonsumen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_tambahkonsumen.Textcolor = System.Drawing.Color.White
         Me.btn_tambahkonsumen.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuThinButton23
-        '
-        Me.BunifuThinButton23.ActiveBorderThickness = 1
-        Me.BunifuThinButton23.ActiveCornerRadius = 20
-        Me.BunifuThinButton23.ActiveFillColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton23.ActiveLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.BunifuThinButton23.BackgroundImage = CType(resources.GetObject("BunifuThinButton23.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuThinButton23.ButtonText = "Multi Delete"
-        Me.BunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuThinButton23.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.IdleBorderThickness = 1
-        Me.BunifuThinButton23.IdleCornerRadius = 20
-        Me.BunifuThinButton23.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.Location = New System.Drawing.Point(886, 191)
-        Me.BunifuThinButton23.Margin = New System.Windows.Forms.Padding(5)
-        Me.BunifuThinButton23.Name = "BunifuThinButton23"
-        Me.BunifuThinButton23.Size = New System.Drawing.Size(113, 41)
-        Me.BunifuThinButton23.TabIndex = 38
-        Me.BunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel_carikonsumen
         '
@@ -3166,12 +3486,12 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelUtama.BackColor = System.Drawing.Color.SkyBlue
+        Me.PanelUtama.Controls.Add(Me.PanelLaporan)
+        Me.PanelUtama.Controls.Add(Me.Panelkonsumen)
+        Me.PanelUtama.Controls.Add(Me.PanelBackup)
         Me.PanelUtama.Controls.Add(Me.PanelReservasi)
         Me.PanelUtama.Controls.Add(Me.PanelPegawai)
         Me.PanelUtama.Controls.Add(Me.PanelKamar)
-        Me.PanelUtama.Controls.Add(Me.Panelkonsumen)
-        Me.PanelUtama.Controls.Add(Me.PanelBackup)
-        Me.PanelUtama.Controls.Add(Me.PanelLaporan)
         Me.PanelUtama.Controls.Add(Me.Menu_Utama)
         Me.PanelUtama.Location = New System.Drawing.Point(0, 63)
         Me.PanelUtama.Name = "PanelUtama"
@@ -3203,10 +3523,23 @@ Partial Class Dashboard
         Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Location = New System.Drawing.Point(224, 24)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1056, 41)
         Me.Panel1.TabIndex = 3
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Roboto", 13.0!)
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(442, 18)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(148, 23)
+        Me.Label9.TabIndex = 5
+        Me.Label9.Text = "Sang Surya Hotel"
         '
         'Label1
         '
@@ -3223,6 +3556,123 @@ Partial Class Dashboard
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'btn_rptkonsumen
+        '
+        Me.btn_rptkonsumen.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_rptkonsumen.Depth = 0
+        Me.btn_rptkonsumen.Location = New System.Drawing.Point(854, 449)
+        Me.btn_rptkonsumen.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_rptkonsumen.Name = "btn_rptkonsumen"
+        Me.btn_rptkonsumen.Primary = True
+        Me.btn_rptkonsumen.Size = New System.Drawing.Size(189, 38)
+        Me.btn_rptkonsumen.TabIndex = 47
+        Me.btn_rptkonsumen.Text = "Laporan Konsumen"
+        Me.btn_rptkonsumen.UseVisualStyleBackColor = True
+        '
+        'Panel6
+        '
+        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.btn_carikonsumen1)
+        Me.Panel6.Controls.Add(Me.TextBox34)
+        Me.Panel6.Controls.Add(Me.Label11)
+        Me.Panel6.Location = New System.Drawing.Point(2, 2)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(1011, 40)
+        Me.Panel6.TabIndex = 50
+        '
+        'btn_carikonsumen1
+        '
+        Me.btn_carikonsumen1.ActiveBorderThickness = 1
+        Me.btn_carikonsumen1.ActiveCornerRadius = 20
+        Me.btn_carikonsumen1.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_carikonsumen1.ActiveForecolor = System.Drawing.Color.White
+        Me.btn_carikonsumen1.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_carikonsumen1.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.btn_carikonsumen1.BackgroundImage = CType(resources.GetObject("btn_carikonsumen1.BackgroundImage"), System.Drawing.Image)
+        Me.btn_carikonsumen1.ButtonText = "Cari"
+        Me.btn_carikonsumen1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_carikonsumen1.Font = New System.Drawing.Font("Century Gothic", 11.0!)
+        Me.btn_carikonsumen1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_carikonsumen1.IdleBorderThickness = 1
+        Me.btn_carikonsumen1.IdleCornerRadius = 20
+        Me.btn_carikonsumen1.IdleFillColor = System.Drawing.Color.White
+        Me.btn_carikonsumen1.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_carikonsumen1.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_carikonsumen1.Location = New System.Drawing.Point(352, 3)
+        Me.btn_carikonsumen1.Margin = New System.Windows.Forms.Padding(5)
+        Me.btn_carikonsumen1.Name = "btn_carikonsumen1"
+        Me.btn_carikonsumen1.Size = New System.Drawing.Size(64, 37)
+        Me.btn_carikonsumen1.TabIndex = 41
+        Me.btn_carikonsumen1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TextBox34
+        '
+        Me.TextBox34.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox34.Location = New System.Drawing.Point(158, 12)
+        Me.TextBox34.Name = "TextBox34"
+        Me.TextBox34.Size = New System.Drawing.Size(186, 22)
+        Me.TextBox34.TabIndex = 38
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(2, 12)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(130, 20)
+        Me.Label11.TabIndex = 5
+        Me.Label11.Text = "Cari Berdasarkan"
+        '
+        'DGV_konsumen1
+        '
+        Me.DGV_konsumen1.AllowUserToAddRows = False
+        Me.DGV_konsumen1.AllowUserToDeleteRows = False
+        Me.DGV_konsumen1.AllowUserToResizeRows = False
+        DataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DGV_konsumen1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle61
+        Me.DGV_konsumen1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DGV_konsumen1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_konsumen1.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DGV_konsumen1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGV_konsumen1.CausesValidation = False
+        Me.DGV_konsumen1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle62.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle62.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle62.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_konsumen1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle62
+        Me.DGV_konsumen1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle63.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle63.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.DeepSkyBlue
+        DataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_konsumen1.DefaultCellStyle = DataGridViewCellStyle63
+        Me.DGV_konsumen1.DoubleBuffered = True
+        Me.DGV_konsumen1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.DGV_konsumen1.EnableHeadersVisualStyles = False
+        Me.DGV_konsumen1.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.DGV_konsumen1.HeaderForeColor = System.Drawing.Color.White
+        Me.DGV_konsumen1.Location = New System.Drawing.Point(2, 42)
+        Me.DGV_konsumen1.Name = "DGV_konsumen1"
+        Me.DGV_konsumen1.ReadOnly = True
+        Me.DGV_konsumen1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGV_konsumen1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.DGV_konsumen1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_konsumen1.Size = New System.Drawing.Size(1011, 293)
+        Me.DGV_konsumen1.TabIndex = 49
         '
         'Dashboard
         '
@@ -3242,6 +3692,9 @@ Partial Class Dashboard
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelReservasi.ResumeLayout(False)
         Me.PanelReservasi.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        CType(Me.DGV_kamarkosong, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -3264,6 +3717,11 @@ Partial Class Dashboard
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.DGV_reservasi, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.DGV_pembayaran, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
         Me.Panelkonsumen.ResumeLayout(False)
         Me.Panelkonsumen.PerformLayout()
         Me.Panel_carikonsumen.ResumeLayout(False)
@@ -3275,6 +3733,11 @@ Partial Class Dashboard
         Me.Panel_caripegawai.PerformLayout()
         CType(Me.DGV_pegawai, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelUtama.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        CType(Me.DGV_konsumen1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3287,7 +3750,7 @@ Partial Class Dashboard
     Friend WithEvents btnkamar As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents struserid As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents strid As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents strnama As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents PanelReservasi As Panel
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents PanelKamar As Panel
@@ -3387,7 +3850,6 @@ Partial Class Dashboard
     Friend WithEvents TabLaporan As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TextBox21 As TextBox
     Friend WithEvents Panel_carikonsumen As Panel
     Friend WithEvents TextBox17 As TextBox
@@ -3396,7 +3858,6 @@ Partial Class Dashboard
     Friend WithEvents txt_caripegawai As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents DGV_pegawai As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents BunifuThinButton23 As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents btn_caripegawai As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btn_carikamar As Bunifu.Framework.UI.BunifuThinButton2
@@ -3451,4 +3912,28 @@ Partial Class Dashboard
     Friend WithEvents btn_batalpegawai As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_simpanpegawai As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_tambahpegawai As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Date_mulai As Bunifu.Framework.UI.BunifuDatepicker
+    Friend WithEvents BunifuThinButton21 As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents Label6 As Label
+    Friend WithEvents DGV_kamarkosong As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents Date_akhir As Bunifu.Framework.UI.BunifuDatepicker
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents strid As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents btn_rptpembayaran As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents btn_rptreservasi As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents btn_caripembayaran As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents TextBox33 As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents DGV_pembayaran As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents btn_rptkonsumen As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents btn_carikonsumen1 As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents TextBox34 As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents DGV_konsumen1 As Bunifu.Framework.UI.BunifuCustomDataGrid
 End Class

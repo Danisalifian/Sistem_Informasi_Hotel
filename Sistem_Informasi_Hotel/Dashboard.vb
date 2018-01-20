@@ -19,10 +19,14 @@ Public Class Dashboard
         disable_input_pembayaran()
         load_datapegawai()
         load_datakonsumen()
+        load_datakonsumen1()
         load_datakamar()
         load_datareservasi()
+        load_datapembayaran
         disable_sort_konsumen()
         cmb_jenisbayar.SelectedIndex = 1
+        clear_pembayaran()
+        clear_reservasi()
     End Sub
 
     Private Sub btnreservasi_Click(sender As Object, e As EventArgs) Handles btnreservasi.Click
@@ -173,6 +177,7 @@ Public Class Dashboard
             Dim result = MessageBox.Show("Data tersimpan", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
             If result = DialogResult.OK Then
                 load_datakonsumen()
+                load_datakonsumen1()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -487,13 +492,7 @@ Public Class Dashboard
     Private Sub load_datareservasi()
         DGV_reservasi.DataSource = Nothing
         Using mysqlconn As New MySqlConnection("server=Localhost;userid=root;password= ;database=db_hotel")
-            Using cmd As New MySqlCommand("SELECT pembayaran.`id_pembayaran`,reservasi.`id_konsumen`,konsumen.`nama`,
-                      reservasi.`id_reservasi`,reservasi.`tgl_reservasi`,reservasi.`check_in`,reservasi.`check_out`,
-                      reservasi.`hari`,kamar.`id_kamar`,kamar.`tipe_kamar`,kamar.`harga`,pegawai.`nama`
-                      FROM konsumen JOIN reservasi ON reservasi.`id_konsumen`=konsumen.`id_konsumen` JOIN kamar ON 
-                      reservasi.`id_kamar`=kamar.`id_kamar` JOIN pegawai ON	reservasi.`id_pegawai`=pegawai.`id_pegawai`
-                      JOIN pembayaran ON pembayaran.`id_reservasi`=reservasi.`id_reservasi`
-                      WHERE pegawai.`id_pegawai`='admin';", mysqlconn)
+            Using cmd As New MySqlCommand("SELECT * from reservasi;", mysqlconn)
                 cmd.CommandType = CommandType.Text
                 Using sda As New MySqlDataAdapter(cmd)
                     Using dt As New DataTable()
@@ -501,17 +500,67 @@ Public Class Dashboard
                         DGV_reservasi.DataSource = dt
                         With DGV_reservasi
                             .RowHeadersVisible = False
-                            .Columns(0).HeaderText = "Id Pembayaran"
+                            .Columns(0).HeaderText = "Id Reservasi"
                             .Columns(1).HeaderText = "Id Konsumen"
-                            .Columns(2).HeaderText = "Nama Konsumen"
-                            .Columns(3).HeaderText = "Id Reservasi"
-                            .Columns(4).HeaderText = "Tanggal Reservasi"
-                            .Columns(5).HeaderText = "Check In"
-                            .Columns(6).HeaderText = "Check Out"
-                            .Columns(7).HeaderText = "Hari"
-                            .Columns(8).HeaderText = "Id Kamar"
-                            .Columns(9).HeaderText = "Tipe Kamar"
-                            .Columns(10).HeaderText = "Harga"
+                            .Columns(2).HeaderText = "Tanggal Reservasi"
+                            .Columns(3).HeaderText = "Check In"
+                            .Columns(4).HeaderText = "Check out"
+                            .Columns(5).HeaderText = "Nomor kamar"
+                            .Columns(6).HeaderText = "Hari"
+                            .Columns(7).HeaderText = "Biaya Tambahan"
+                            .Columns(8).HeaderText = "Id Pegawai"
+                        End With
+                    End Using
+                End Using
+            End Using
+        End Using
+    End Sub
+
+    Private Sub load_datapembayaran()
+        DGV_pembayaran.DataSource = Nothing
+        Using mysqlconn As New MySqlConnection("server=Localhost;userid=root;password= ;database=db_hotel")
+            Using cmd As New MySqlCommand("SELECT * from pembayaran;", mysqlconn)
+                cmd.CommandType = CommandType.Text
+                Using sda As New MySqlDataAdapter(cmd)
+                    Using dt As New DataTable()
+                        sda.Fill(dt)
+                        DGV_pembayaran.DataSource = dt
+                        With DGV_pembayaran
+                            .RowHeadersVisible = False
+                            .Columns(0).HeaderText = "Id Pembayaran"
+                            .Columns(1).HeaderText = "Id Reservasi"
+                            .Columns(2).HeaderText = "Jenis Bayar"
+                            .Columns(3).HeaderText = "Subtotal"
+                            .Columns(4).HeaderText = "Biaya Tambahan"
+                            .Columns(5).HeaderText = "Total"
+                            .Columns(6).HeaderText = "Bayar"
+                            .Columns(7).HeaderText = "Kembalian"
+                        End With
+                    End Using
+                End Using
+            End Using
+        End Using
+    End Sub
+
+    Private Sub load_datakonsumen1()
+        DGV_konsumen1.DataSource = Nothing
+        Using mysqlconn As New MySqlConnection("server=Localhost;userid=root;password= ;database=db_hotel")
+            Using cmd As New MySqlCommand("SELECT * from konsumen;", mysqlconn)
+                cmd.CommandType = CommandType.Text
+                Using sda As New MySqlDataAdapter(cmd)
+                    Using dt As New DataTable()
+                        sda.Fill(dt)
+                        DGV_konsumen1.DataSource = dt
+                        With DGV_konsumen1
+                            .RowHeadersVisible = False
+                            .Columns(0).HeaderText = "Id Konsumen"
+                            .Columns(1).HeaderText = "Nama"
+                            .Columns(2).HeaderText = "Jenis Kelamin"
+                            .Columns(3).HeaderText = "Tanggal Lahir"
+                            .Columns(4).HeaderText = "Tempat Lahir"
+                            .Columns(5).HeaderText = "Alamat"
+                            .Columns(6).HeaderText = "Kota"
+                            .Columns(7).HeaderText = "No Telepon"
                         End With
                     End Using
                 End Using
@@ -577,6 +626,46 @@ Public Class Dashboard
         End Try
     End Sub
 
+    Private Sub cari_kamar_kosong()
+        Dim mysqlconn As MySqlConnection
+        Dim query As String
+        Dim tgl_in, tgl_out As String
+
+        '================memformat tanggal agar bisa dibaca mysql============
+        tgl_in = Date_mulai.Value.Date.ToString("yyyy-MM-dd")
+        tgl_out = Date_akhir.Value.Date.ToString("yyyy-MM-dd")
+        '=========================================================================
+
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
+
+        Try
+            mysqlconn.Open()
+            query = "SELECT id_kamar,tipe_kamar,harga,fasilitas FROM kamar WHERE id_kamar NOT IN(
+                        SELECT kamar.id_kamar
+                        FROM kamar JOIN reservasi ON reservasi.`id_kamar`=kamar.`id_kamar`
+                        WHERE reservasi.`check_in`<='" + tgl_out + "' AND reservasi.`check_out`>='" + tgl_in + "');"
+            'cmd = New MySqlCommand(query, mysqlconn)
+            'reader = cmd.ExecuteReader
+            Dim data As New MySqlDataAdapter(query, mysqlconn)
+            Dim ds_kamar As DataSet = New DataSet
+            data.Fill(ds_kamar, "kamar")
+            DGV_kamarkosong.DataSource = ds_kamar.Tables("kamar")
+            With DGV_kamarkosong
+                .RowHeadersVisible = False
+                .Columns(0).HeaderText = "Id Kamar"
+                .Columns(1).HeaderText = "Tipe Kamar"
+                .Columns(2).HeaderText = "Harga"
+                .Columns(3).HeaderText = "Fasilitas"
+            End With
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
     Private Sub simpan_reservasi()
         Dim mysqlconn As MySqlConnection
         Dim cmd As MySqlCommand
@@ -590,6 +679,8 @@ Public Class Dashboard
         End If
 
         id_peg = strid.Text
+
+
 
         '================memformat tanggal agar bisa disimpan ke mysql============
         tgl_reservasi = DateTimePicker1.Value.Date.ToString("yyyy-MM-dd")
@@ -641,7 +732,11 @@ Public Class Dashboard
                      "','" + TextBox8.Text + "','" + TextBox11.Text + "','" + TextBox10.Text + "','" + TextBox9.Text + "')"
             cmd = New MySqlCommand(query, mysqlconn)
             reader = cmd.ExecuteReader
-            MessageBox.Show("Data tersimpan", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim result = MessageBox.Show("Data tersimpan", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            If result = DialogResult.OK Then
+                load_datareservasi()
+                load_datapembayaran
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
@@ -666,88 +761,14 @@ Public Class Dashboard
             mysqlconn.Close()
             Dim result = MessageBox.Show("Data terhapus", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
             If result = DialogResult.OK Then
-                'list_konsumen()
                 load_datakonsumen()
+                load_datakonsumen1()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             mysqlconn.Dispose()
         End Try
-    End Sub
-
-    Private Sub multi_hapus()
-        'Dim selectedRows As List(Of DataGridViewRow) = (From row In DGV_konsumen.Rows.Cast(Of DataGridViewRow)()
-        '                                                Where Convert.ToBoolean(row.Cells("column1").Value) = True).ToList()
-        'For Each row As DataGridViewRow In selectedRows
-        '    Using mysqlconn As New MySqlConnection("server=Localhost;userid=root;password= ;database=db_hotel")
-        '        Using cmd As New MySqlCommand("delete from konsumen where id_konsumen = @id_konsumen", mysqlconn)
-        '            cmd.CommandType = CommandType.Text
-        '            cmd.Parameters.AddWithValue("@id_konsumen", row.Cells("id_konsumen").Value)
-        '            mysqlconn.Open()
-        '            cmd.ExecuteNonQuery()
-        '            mysqlconn.Close()
-        '        End Using
-        '    End Using
-        'Next
-        'Dim i As Integer
-        'If MessageBox.Show(String.Format("Do you want to delete {0} rows?", selectedRows.Count), "Confirmation", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-        '    For i = DGV_konsumen.Rows.Count() - 1 To 0 Step - 1
-        '        Dim ceklis As Boolean
-        '        ceklis = DGV_konsumen.Rows(i).Cells(0).Value
-        '        If ceklis = True Then
-        '            Dim row As DataGridViewRow
-        '            row = DGV_konsumen.Rows(i)
-        '            Using mysqlconn As New MySqlConnection("server=Localhost;userid=root;password= ;database=db_hotel")
-        '                Using cmd As New MySqlCommand("delete from konsumen where id_konsumen = @id_konsumen", mysqlconn)
-        '                    cmd.CommandType = CommandType.Text
-        '                    cmd.Parameters.AddWithValue("@id_konsumen", row.Cells(1).Value)
-        '                    mysqlconn.Open()
-        '                    cmd.ExecuteNonQuery()
-        '                    mysqlconn.Close()
-        '                End Using
-        '            End Using
-        '        End If
-        '    Next
-        'Dim selectedRows As List(Of DataGridViewRow) = (From row In Me.DGV_konsumen.Rows.Cast(Of DataGridViewRow)()
-        '                                                Where Convert.ToBoolean(row.Cells("Column1").Value) = True).ToList()
-        'If MessageBox.Show(String.Format("Do you want to delete {0} rows?", selectedRows.Count), "Confirmation", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-        '    For Each row As DataGridViewRow In selectedRows
-        '        Using con As New MySqlConnection("server=Localhost;userid=root;password= ;database=db_hotel")
-        '            Using cmd As New MySqlCommand("DELETE FROM konsumen WHERE id_konsumen = @id_konsumen", con)
-        '                cmd.CommandType = CommandType.Text
-        '                cmd.Parameters.AddWithValue("@id_konsumen", row.Cells("id_konsumen").Value)
-        '                con.Open()
-        '                cmd.ExecuteNonQuery()
-        '                con.Close()
-        '            End Using
-        '        End Using
-        '    Next
-        Dim selectedrowcount As Integer = DGV_konsumen.Rows.GetRowCount(DataGridViewElementStates.Selected)
-
-        If DGV_konsumen.SelectedRows.Count > 0 Then
-            Dim no As Object
-            Dim i As Integer
-            For i = 0 To selectedrowcount - 1
-                no = DGV_konsumen.SelectedCells(1).Value
-                Dim mysqlconn As MySqlConnection
-                mysqlconn = New MySqlConnection
-                mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
-                Dim str As String = "DELETE FROM konsumen where id_konsumen='" + no + "'"
-                Dim cmd As MySqlCommand = New MySqlCommand(str, mysqlconn)
-                Try
-                    mysqlconn.Open()
-                    cmd.ExecuteNonQuery()
-                    cmd.Dispose()
-                    mysqlconn.Close()
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-            Next
-            MessageBox.Show("Selected data has been deleted")
-
-            Me.load_datakonsumen()
-        End If
     End Sub
 
     Private Sub ubah_konsumen()
@@ -779,6 +800,7 @@ Public Class Dashboard
             Dim result = MessageBox.Show("Data diperbarui", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
             If result = DialogResult.OK Then
                 load_datakonsumen()
+                load_datakonsumen1()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -935,10 +957,6 @@ Public Class Dashboard
         TextBox27.Text = no_telp
     End Sub
 
-    Private Sub BunifuThinButton23_Click_1(sender As Object, e As EventArgs) Handles BunifuThinButton23.Click
-        multi_hapus()
-    End Sub
-
     Private Sub DGV_kamar_MouseClick(sender As Object, e As MouseEventArgs) Handles DGV_kamar.MouseClick
         disable_input_kamar()
         Dim id_kamar As String = DGV_kamar.SelectedRows(0).Cells(0).Value
@@ -1027,6 +1045,7 @@ Public Class Dashboard
 
     Private Sub btn_resetkonsumen_Click(sender As Object, e As EventArgs) Handles btn_resetkonsumen.Click
         load_datakonsumen()
+        load_datakonsumen1()
         TextBox17.Text = ""
     End Sub
 
@@ -1153,31 +1172,39 @@ Public Class Dashboard
     End Sub
 
     Private Sub btn_simpanreserv_Click(sender As Object, e As EventArgs) Handles btn_simpanreserv.Click
-        simpan_reservasi()
-        disable_input_reservasi()
-        enable_input_pembayaran()
-        TextBox6.Focus()
-        TextBox5.Text = TextBox1.Text
-        hitung_subtotal()
-        If chk_xbed.Checked = True Then
-            TextBox8.Text = "125000"
+        If (TextBox1.Text = "") Or (TextBox2.Text = "") Or (TextBox3.Text = "") Or (TextBox4.Text = "") Then
+            MessageBox.Show("Silahkan melengkapi data yang masih kosong", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
-            TextBox8.Text = "0"
+            simpan_reservasi()
+            disable_input_reservasi()
+            enable_input_pembayaran()
+            TextBox6.Focus()
+            TextBox5.Text = TextBox1.Text
+            hitung_subtotal()
+            If chk_xbed.Checked = True Then
+                TextBox8.Text = "125000"
+            Else
+                TextBox8.Text = "0"
+            End If
+            TextBox5.Enabled = False
+            TextBox8.Enabled = False
+            TextBox7.Enabled = False
+            TextBox9.Enabled = False
+            TextBox11.Enabled = False
         End If
-        TextBox5.Enabled = False
-        TextBox8.Enabled = False
-        TextBox7.Enabled = False
-        TextBox9.Enabled = False
-        TextBox11.Enabled = False
     End Sub
 
     Private Sub btn_simpanpembayaran_Click(sender As Object, e As EventArgs) Handles btn_simpanpembayaran.Click
-        simpan_pembayaran()
-        disable_input_reservasi()
-        disable_input_pembayaran()
-        clear_pembayaran()
-        clear_reservasi()
-        chk_xbed.Checked = False
+        If (TextBox5.Text = "") Or (TextBox6.Text = "") Or (TextBox7.Text = "") Or (TextBox8.Text = "") Or (TextBox9.Text = "") Or (TextBox10.Text = "") Or (TextBox11.Text = "") Then
+            MessageBox.Show("Silahkan melengkapi data yang masih kosong", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            simpan_pembayaran()
+            disable_input_reservasi()
+            disable_input_pembayaran()
+            clear_pembayaran()
+            clear_reservasi()
+            chk_xbed.Checked = False
+        End If
     End Sub
 
     Private Sub btn_hitung_Click(sender As Object, e As EventArgs) Handles btn_hitung.Click
@@ -1307,6 +1334,22 @@ Public Class Dashboard
     Private Sub btn_batalpembayaran_Click(sender As Object, e As EventArgs) Handles btn_batalpembayaran.Click
         clear_pembayaran()
         disable_input_pembayaran()
+    End Sub
+
+    Private Sub BunifuThinButton21_Click(sender As Object, e As EventArgs) Handles BunifuThinButton21.Click
+        cari_kamar_kosong()
+    End Sub
+
+    Private Sub btn_rptreservasi_Click(sender As Object, e As EventArgs) Handles btn_rptreservasi.Click
+        rpt_reservasi.ShowDialog()
+    End Sub
+
+    Private Sub btn_rptpembayaran_Click(sender As Object, e As EventArgs) Handles btn_rptpembayaran.Click
+        rpt_pembayaran.ShowDialog()
+    End Sub
+
+    Private Sub btn_rptkonsumen_Click(sender As Object, e As EventArgs) Handles btn_rptkonsumen.Click
+        rpt_konsumen.ShowDialog()
     End Sub
 
     Private Sub btn_simpankamar_Click(sender As Object, e As EventArgs) Handles btn_simpankamar.Click

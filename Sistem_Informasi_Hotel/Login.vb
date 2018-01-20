@@ -1,8 +1,14 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports MaterialSkin
+Imports MaterialSkin.Controls
 Public Class Login
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
+        SkinManager.AddFormToManage(Me)
+        SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        SkinManager.ColorScheme = New ColorScheme(Primary.Indigo500, Primary.Indigo700, Primary.Indigo100, Accent.Pink200, TextShade.WHITE)
     End Sub
 
     Dim mysqlconn As MySqlConnection
@@ -26,14 +32,16 @@ Public Class Login
                 MessageBox.Show("Field Username atau password masih kosong", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
                 mysqlconn.Open()
-                query = "select id_pegawai,pass from pegawai where id_pegawai ='" + txtuname.Text + "'and pass ='" + txtpass.Text + "'"
+                query = "select id_pegawai,pass,nama from pegawai where id_pegawai ='" + txtuname.Text + "'and pass ='" + txtpass.Text + "'"
                 cmd = New MySqlCommand(query, mysqlconn)
                 reader = cmd.ExecuteReader
                 If reader.HasRows Then
                     'MessageBox.Show("Username dan Password benar")
+                    reader.Read()
                     Dim dashboard As New Dashboard
                     Me.Hide()
                     'mengirim data dari textboxt username ke label userid di form dashboard
+                    dashboard.strnama.Text = reader("nama")
                     dashboard.strid.Text = txtuname.Text
                     dashboard.ShowDialog()
                     Me.Close()
@@ -51,41 +59,8 @@ Public Class Login
         End Try
     End Sub
 
-    Private Sub btncekdb_Click(sender As Object, e As EventArgs) Handles btncekdb.Click
-
-            mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=Localhost;userid=root;password= ;database=db_hotel"
-        Try
-                mysqlconn.Open()
-                MessageBox.Show("Koneksi Sukses!", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                mysqlconn.Close()
-            Catch ex As MySqlException
-                'MessageBox.Show(ex.Message)
-                Dim result = MessageBox.Show("MySql server tidak aktif atau Database tidak tersedia, buat database ?", "Peringatan", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-                If result = DialogResult.Yes Then
-                    MessageBox.Show("Yes pressed")
-                    'buat_db()
-                ElseIf result = DialogResult.No Then
-                    MessageBox.Show("Database tidak dibuat")
-                End If
-            Finally
-                mysqlconn.Dispose()
-            End Try
-        End Sub
-
-        Private Sub btnmasuk_Click(sender As Object, e As EventArgs) Handles btnmasuk.Click
-            login()
-        End Sub
-
-    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles btntutup.Click
-        Application.Exit()
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+        login()
     End Sub
 
-    Private Sub txtpass_OnValueChanged(sender As Object, e As EventArgs)
-
-        End Sub
-
-    Private Sub txtuname_Click(sender As Object, e As EventArgs) Handles txtuname.Click
-
-    End Sub
 End Class
